@@ -1,0 +1,31 @@
+.btn {
+  padding: 16px 48px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-size: 16px;
+
+  &-orange {
+    background-color: rgba(219, 68, 68, 1);
+    border: 1px solid rgba(219, 68, 68, 1);
+    color: rgba(250, 250, 250, 1);
+
+    &:hover {
+      background-color: rgba(224, 117, 117, 1);
+      border: 1px solid rgba(224, 117, 117, 1);
+    }
+  }
+
+  &-transparent {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 1);
+
+    &:hover {
+      color: rgba(125, 129, 132, 1);
+    }
+  }
+}
+
+.small {
+  padding: 10px 48px;
+}
