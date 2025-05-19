@@ -1,12 +1,16 @@
 import './App.css';
-import Button from './Components/Button/Button';
-import Icon from './Components/Icon/Icon';
+import { RouterProvider } from 'react-router-dom';
+
+import { routerData } from './Date/webdata';
+// import Button from './Components/Button/Button';
+// import Icon from './Components/Icon/Icon';
+// import sprite from '../src/assets/svg/sprite.svg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <br></br>
+      <RouterProvider route={ routerData }></RouterProvider>
+      {/* <br></br>
         <Button
           text='Button orange'
           className='btn-orange' />
@@ -20,8 +24,10 @@ function App() {
           className='btn-transparent' />
         <br></br>
         <Icon iconname="Camera" width={'56'} height={'56'} />
-        <Icon iconname="Cart=Off" width={'24'} height={'24'}/>
-      </header>
+        <Icon iconname="Cart=Off" width={'24'} height={'24'} />
+        <svg iconname='Camera'>
+          <use href={`${sprite}` } />
+        </svg> */}
     </div>
   );
 }

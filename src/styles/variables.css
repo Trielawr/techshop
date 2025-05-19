@@ -1,0 +1,10 @@
+:root{
+    /*colors*/
+    --primary-black: rgba(0, 0, 0, 1);
+    --primary-pink: rgba(219, 68, 68, 1);
+    --primary-green: rgba(0, 255, 102, 1);
+    --primary-white: rgba(250, 250, 250, 1);
+    --secondary-pink: rgba(224, 117, 117, 1);
+    --secondary-gray: rgba(125, 129, 132, 1);
+    --secondary-black: rgba(0, 0, 0, 0.5);
+}

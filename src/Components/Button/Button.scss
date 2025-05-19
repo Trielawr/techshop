@@ -5,23 +5,23 @@
   font-size: 16px;
 
   &-orange {
-    background-color: rgba(219, 68, 68, 1);
-    border: 1px solid rgba(219, 68, 68, 1);
+    background-color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
     color: rgba(250, 250, 250, 1);
 
     &:hover {
-      background-color: rgba(224, 117, 117, 1);
-      border: 1px solid rgba(224, 117, 117, 1);
+      background-color: var(--secondary-pink);
+      border: 1px solid var(--secondary-pink);
     }
   }
 
   &-transparent {
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    color: rgba(0, 0, 0, 1);
+    border: 1px solid var(--secondary-black);
+    color: var(--primary-black);
 
     &:hover {
-      color: rgba(125, 129, 132, 1);
+      color: var(--secondary-gray);
     }
   }
 }
