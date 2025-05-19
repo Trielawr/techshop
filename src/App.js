@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './Components/Button/Button';
+import Icon from './Components/Icon/Icon';
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         <br></br>
         <Button
           text='Button transparent'
-        className='btn-transparent'/>
+          className='btn-transparent' />
+        <br></br>
+        <Icon iconname="Camera" width={'56'} height={'56'} />
+        <Icon iconname="Cart=Off" width={'24'} height={'24'}/>
       </header>
     </div>
   );
