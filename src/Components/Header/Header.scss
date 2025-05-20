@@ -1,0 +1,62 @@
+.top-header {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+
+  &-banner {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+
+    p {
+      margin-bottom: 0px;
+    }
+
+    span {
+      color: var(--primary-white);
+    }
+
+    span:hover {
+      color: var(--secondary-gray);
+    }
+  }
+
+  &-language {
+    flex-grow: 1;
+  }
+}
+
+.btn-primary {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-hover-bg: var(--secondary-gray);
+  --bs-btn-hover-border-color: var(--secondary-gray);
+}
+
+.btn {
+  --bs-btn-padding-x: 0px;
+  --bs-btn-padding-y: 0px;
+  border-width: 0px;
+  line-height: 1;
+}
+
+.dropdown-menu {
+  background-color: var(--secondary-gray);
+  backdrop-filter: blur(150px);
+}
+
+.dropdown-toggle::after {
+  content: url("../../assets/svg/Icon/DropDown.svg");
+  vertical-align: -0.4em;
+  border: none;
+}
