@@ -1,27 +1,44 @@
-.top-header {
+@import "../../styles/scss-variables.scss";
+
+.header-back {
   background-color: var(--primary-black);
+}
+
+.header-top {
   color: var(--primary-white);
   display: flex;
   flex-direction: row;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
   align-items: center;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
 
   &-banner {
     text-align: center;
     display: flex;
     flex-direction: row;
-    flex-grow: 3;
+    flex-grow: 100;
     justify-content: center;
+    padding-right: 8px;
     gap: 8px;
     align-items: center;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: block;
+    }
 
     p {
       margin-bottom: 0px;
     }
 
     span {
-      color: var(--primary-white);
+      text-decoration: underline solid;
+      color: var(--secondary-white);
+      font-weight: 600;
+      font-size: 14px; // не перебила reboot там 16 зч
+      line-height: 1.71;
     }
 
     span:hover {
@@ -30,6 +47,7 @@
   }
 
   &-language {
+    display: flex;
     flex-grow: 1;
   }
 }
@@ -57,6 +75,47 @@
 
 .dropdown-toggle::after {
   content: url("../../assets/svg/Icon/DropDown.svg");
+  color: var(--primary-white);
   vertical-align: -0.4em;
   border: none;
+}
+
+.header {
+  border-bottom: 0.5px solid var(--primary-black);
+  padding: 40px 10px 16px;
+
+  &-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-logo {
+      color: var(--primary-black);
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+      text-decoration: none;
+      // flex-grow: 5;
+
+      &:hover {
+        color: var(--primary-black);
+        cursor: pointer;
+      }
+    }
+
+    &-nav {
+      justify-content: space-around;
+      display: flex;
+      text-align: center;
+      // flex-grow: 5;
+    }
+
+    &-form {
+      justify-content: space-between;
+      flex-direction: row;
+      display: flex;
+      // flex-grow: 1;
+    }
+  }
 }

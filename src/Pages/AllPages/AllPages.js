@@ -6,4 +6,4 @@ const AllPages = () => {
   )
 }
 
-export default AllPages;
+export default AllPages;    
