@@ -81,13 +81,13 @@
 }
 
 .header {
-  border-bottom: 0.5px solid var(--primary-black);
+  border-bottom: 0.5px solid var(--border-gray);
+
   padding: 40px 10px 16px;
 
   &-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 
     &-logo {
       color: var(--primary-black);
@@ -96,7 +96,6 @@
       font-size: 24px;
       line-height: 1;
       text-decoration: none;
-      // flex-grow: 5;
 
       &:hover {
         color: var(--primary-black);
@@ -104,18 +103,50 @@
       }
     }
 
-    &-nav {
-      justify-content: space-around;
+    &-link {
       display: flex;
-      text-align: center;
-      // flex-grow: 5;
+      gap: min(48px, 8%);
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: var(--primary-black);
+        list-style: none;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--primary-gray);
+          text-decoration: underline;
+          text-underline-offset: 5px;
+        }
+      }
     }
 
     &-form {
       justify-content: space-between;
       flex-direction: row;
       display: flex;
-      // flex-grow: 1;
+      gap: 16px;
+    }
+
+    input {
+      background: url(/assets/svg/Icon/Find.svg) no-repeat scroll 200px 7px;
+      padding-left: 100px;
+      background-color: var(--secondary-ligth-gray);
+      border: 0;
+      border-radius: 4px;
+      padding: 10px 70px 10px 20px;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-right: 8px;
     }
   }
 }
