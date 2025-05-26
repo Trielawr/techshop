@@ -4,6 +4,8 @@ import '../Header/Header.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Icon from '../Icon/Icon';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../../assets/utilits';
 import { validationSchema } from '../../assets/utilits';
@@ -63,8 +65,19 @@ const Header = () => {
                     <li><NavLink to={ROUTES.login}>Sign up</NavLink></li>
                   </ul> 
                 </nav>
-                <div className='header-main-form'>
-                  <form onSubmit={ formik.handleSubmit } className='header-main-search'>
+            <div className='header-main-form'>
+            <Form className="d-flex">
+                  <Form.Control
+                    type="text"
+                    placeholder='What are you looking forggg?'
+                    // className="me-2"
+                    aria-label="Search"
+                  />
+                   <Button variant="outline-success">
+                     <Icon iconname='Find' width={'24'} height={'24'} />
+                   </Button>
+                </Form>
+                {/*  <form onSubmit={ formik.handleSubmit } className='header-main-search'>
                     <input
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -77,10 +90,10 @@ const Header = () => {
                         text='sent'
                         type='submit'
                         disabled={ formik.errors.find }
-                    /> */}
+                    /> 
                         { (formik.errors.find && formik.touched.find) ? <p className='errors'>{ formik.errors.find } </p>: null }
-                    {/* <input type='text' placeholder='What are you looking for?'/> */}
-                  </form>
+                    {/* <input type='text' placeholder='What are you looking for?'/> 
+                  </form>*/}
                   <Icon iconname='heart small' width={'32'} height={'32'} />
                   <Icon iconname='Cart1' width={'32'} height={'32'}/>
                 </div>
