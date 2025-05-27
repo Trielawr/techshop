@@ -66,17 +66,24 @@ const Header = () => {
                   </ul> 
                 </nav>
             <div className='header-main-form'>
-            <Form className="d-flex">
-                  <Form.Control
-                    type="text"
-                    placeholder='What are you looking forggg?'
-                    // className="me-2"
-                    aria-label="Search"
-                  />
-                   <Button variant="outline-success">
-                     <Icon iconname='Find' width={'24'} height={'24'} />
-                   </Button>
-                </Form>
+               <form onSubmit={ formik.handleSubmit } className='header-main-search'>
+                  <Form className="d-flex">
+                      <Form.Control
+                        type="text"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={ formik.values.find }
+                        placeholder='What are you looking forggg?'
+                        // className="me-2"
+                        aria-label="Search"
+                      />
+                      <Button type='submit' variant="outline-success" disabled={ formik.errors.find }>
+                        <Icon iconname='Find' width={'24'} height={'24'} />
+                  </Button>
+                  {console.log(formik.values.find )}
+                  </Form>
+                  { (formik.errors.find && formik.touched.find) ? <p className='errors'>{ formik.errors.find } </p>: null }
+                </form>
                 {/*  <form onSubmit={ formik.handleSubmit } className='header-main-search'>
                     <input
                       onChange={formik.handleChange}

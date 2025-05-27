@@ -95,6 +95,10 @@
   border-bottom: 0.5px solid var(--border-gray);
   padding: 40px 10px 16px;
 
+  @media screen and (max-width: $bp-laptop) {
+    padding: 16px;
+  }
+
   &-main {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -111,6 +115,12 @@
       line-height: 1;
       text-decoration: none;
 
+      @media screen and (max-width: $bp-laptop) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
       &:hover {
         color: var(--primary-black);
         cursor: pointer;
@@ -120,6 +130,14 @@
     &-link {
       display: flex;
       gap: min(48px, 8%);
+      flex-shrink: 1;
+
+      @media screen and (max-width: $bp-laptop) {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        padding-left: 0px;
+      }
 
       li {
         list-style: none;
@@ -147,6 +165,13 @@
       flex-direction: row;
       display: flex;
       gap: 16px;
+
+      @media screen and (max-width: $bp-laptop) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 5px;
+      }
     }
 
     input {
@@ -163,6 +188,10 @@
       width: auto;
       min-width: min-content;
       max-width: max-content;
+
+      @media screen and (max-width: $bp-laptop) {
+        width: 75%;
+      }
 
       &:hover {
         border: 1px solid var(--button-hover);
