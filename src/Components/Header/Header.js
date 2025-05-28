@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useFormik } from "formik";
+import { Field, Formik, useFormik } from "formik";
 import '../Header/Header.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -13,26 +13,13 @@ import { validationSchema } from '../../assets/utilits';
 const Header = () => {
 
   const [find, setFind] = useState('');
-  const [disabled, setDisabled] = useState('false');
   
-  const onChangeForm = () => {
-    setFind('');
-    setDisabled('true');
-  }
+  const initialValues = { find: '' }
 
-  const formik = useFormik({
-    enableReinitialize: true,
-    initialValues: {
-      search: find || ""
-    },
-    validationSchema: validationSchema,
-    onSubmit: () => {
-      onChangeForm();
-      formik.resetForm();
-    }
-  }
-  );
- 
+  const handleSubmit = () => {
+    setFind('');
+  };
+
   return (  
       <header > 
         <div className='header-back'>
@@ -65,42 +52,38 @@ const Header = () => {
                     <li><NavLink to={ROUTES.login}>Sign up</NavLink></li>
                   </ul> 
                 </nav>
-            <div className='header-main-form'>
-               <form onSubmit={ formik.handleSubmit } className='header-main-search'>
-                  <Form className="d-flex">
-                      <Form.Control
-                        type="text"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={ formik.values.find }
-                        placeholder='What are you looking forggg?'
-                        // className="me-2"
-                        aria-label="Search"
-                      />
-                      <Button type='submit' variant="outline-success" disabled={ formik.errors.find }>
-                        <Icon iconname='Find' width={'24'} height={'24'} />
-                  </Button>
-                  {console.log(formik.values.find )}
-                  </Form>
-                  { (formik.errors.find && formik.touched.find) ? <p className='errors'>{ formik.errors.find } </p>: null }
-                </form>
-                {/*  <form onSubmit={ formik.handleSubmit } className='header-main-search'>
-                    <input
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      name= "search"
-                      type='search'
-                      value={ formik.values.find }
-                      placeholder='What are you looking for?' />
-                      {/* <Button
-                        className='yellow-btn'
-                        text='sent'
-                        type='submit'
-                        disabled={ formik.errors.find }
-                    /> 
-                        { (formik.errors.find && formik.touched.find) ? <p className='errors'>{ formik.errors.find } </p>: null }
-                    {/* <input type='text' placeholder='What are you looking for?'/> 
-                  </form>*/}
+                <div className='header-main-form'>
+                  <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}             
+                  >
+                  {({ isSbmitting }) => (
+                    <Form className="d-flex">
+                        <Field name='search'>
+                          {({ field, meta }) => (
+                            <>
+                              <input
+                                {...field}
+                                type='text'
+                                placeholder='What are you looking for?'
+                                className={`form-control ${meta.touched && meta.error ? 'is-invalid' : ''}`}
+                              />
+                              {console.log(field.value)}
+                              {meta.touched && meta.error && 
+                              <div className='invalid-feadback'>
+                                  {meta.error}
+                              </div>
+                              }
+                            </>
+                          )}
+                        </Field>
+                        <button type='submit' className='btn outline-success' disabled={ isSbmitting }>
+                          <Icon iconname='Find' width={'24'} height={'24'} />
+                        </button>
+                      </Form>
+                  )}
+                  </Formik>
                   <Icon iconname='heart small' width={'32'} height={'32'} />
                   <Icon iconname='Cart1' width={'32'} height={'32'}/>
                 </div>
