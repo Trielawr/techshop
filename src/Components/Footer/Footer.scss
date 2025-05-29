@@ -1,0 +1,15 @@
+.footer {
+  background-color: var(--primary-black);
+  width: 100%;
+  padding: 80px 0 124px 0;
+  position: relative;
+  bottom: 0;
+
+  a {
+    color: var(--secondary-white);
+
+    &:hover {
+      color: var(--secondary-gray);
+    }
+  }
+}

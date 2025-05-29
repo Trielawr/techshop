@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
 export const validationSchema = Yup.object().shape({
-    query: Yup.string()
+    find: Yup.string()
       .trim()
       .required('Search input is required.')
       .min(3, 'Search input must be at least 3 characters.')
