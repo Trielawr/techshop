@@ -82,6 +82,90 @@ export const routerData = createBrowserRouter([
 ]);
 
 
-// export const footerData = [{
-
-// }]
+export const footerData = [
+  {
+    title: 'Support',
+    item: [
+      {
+        type: 'text',
+        to: '',
+        name: '111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.',
+      },
+      {
+        type: 'link',
+        to: 'mailto:exclusive@gmail.com',
+        name: 'exclusive@gmail.com',
+      },
+      {
+        type: 'link',
+        to: "tel:+38088015888889999",
+        name: '+88015-88888-9999',
+      },
+    ]
+  },
+  {
+    title: 'Account',
+    item: [
+      {
+        type: 'link',
+        to: ROUTES.account,
+        name: 'My Account',
+      },
+      {
+        type: 'link',
+        to: ROUTES.login,
+        name: 'Login / Register',
+      },
+      {
+        type: 'link',
+        to: ROUTES.card,
+        name: 'Cart',
+      },
+      {
+        type: 'link',
+        to: ROUTES.whishlist,
+        name: 'Wishlist',
+      },
+      {
+        type: 'link',
+        to: '',
+        name: 'Shop',
+      },
+    ]
+  },
+  {
+    title: 'Quick Link',
+    item: [
+      {
+        type: 'text',
+        to: '',
+        name: 'Privacy Policy',
+      },
+      {
+        type: 'text',
+        to: '',
+        name: 'Terms Of Use',
+      },
+      {
+        type: 'link',
+        to: "",
+        name: 'FAQ',
+      },
+      {
+        type: 'link',
+        to: ROUTES.contact,
+        name: 'Contact',
+      },
+    ]
+  },
+  {
+    title: 'Download App',
+    item: [
+      {
+        type: 'link',
+        to: 'mailto:contact@yellowkitchens.com',
+        name: 'Contact',
+      },
+    ]
+  }
+];

@@ -8,7 +8,10 @@ const Footer = () => {
     <div className='footer'>
       <div className='container'>
       <div>
-      <NavLink to={ROUTES.home} className='header-main-logo'>Exclusive</NavLink>
+          <NavLink to={ROUTES.home} className='header-main-logo'>Exclusive</NavLink>
+          {
+            
+          }
       </div>
       </div>
     </div>
