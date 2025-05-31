@@ -163,8 +163,8 @@ export const footerData = [
     item: [
       {
         type: 'link',
-        to: 'mailto:contact@yellowkitchens.com',
-        name: 'Contact',
+        to: '/discount',
+        name: 'Save $3 with App New User Only',
       },
     ]
   }
