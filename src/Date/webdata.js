@@ -137,12 +137,12 @@ export const footerData = [
     title: 'Quick Link',
     item: [
       {
-        type: 'text',
+        type: 'link',
         to: '',
         name: 'Privacy Policy',
       },
       {
-        type: 'text',
+        type: 'link',
         to: '',
         name: 'Terms Of Use',
       },
@@ -162,7 +162,7 @@ export const footerData = [
     title: 'Download App',
     item: [
       {
-        type: 'link',
+        type: 'link-small',
         to: '/discount',
         name: 'Save $3 with App New User Only',
       },

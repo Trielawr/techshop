@@ -4,7 +4,7 @@ const Button = ({type, text, className, disabled, onClick, href}) => {
   return (
     <div>
      { console.log(type)}
-      ({!type==='link'?
+      {!type==='link'?
           <button
             className={`btn ${className}`}
             disabled={disabled}
@@ -18,7 +18,7 @@ const Button = ({type, text, className, disabled, onClick, href}) => {
         href={`${href}`}>
         { text }
         </a>
-      })
+      }
     </div>
   )
 }
