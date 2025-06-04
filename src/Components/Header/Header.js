@@ -1,25 +1,12 @@
-import { useState, useRef } from 'react';
-import { Field, Formik } from "formik";
 import '../Header/Header.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Icon from '../Icon/Icon';
-import Form from 'react-bootstrap/Form';
 import { NavLink } from 'react-router-dom';
-import { ROUTES } from '../../assets/utilits';
-import { validationSchema } from '../../assets/utilits';
+import { ROUTES, validationSchemaSearch} from '../../assets/utilits';
+import FieldForm from '../FieldForm/FieldForm';
 
 const Header = () => {
-
-  const initialValues = { find: '' };
-
-  const [find, setFind] = useState(initialValues);
-  
-   const handleSubmit = () => {
-    //  setFind("value");
-     console.log("find",find);
-  };
-
   return (  
       <header > 
         <div className='header-back'>
@@ -53,36 +40,12 @@ const Header = () => {
                   </ul> 
                 </nav>
                 <div className='header-main-form'>
-                  <Formik
-                    initialValues={initialValues}
-                    validationSchema={validationSchema}
-                    onSubmit={handleSubmit}             
-                  >
-                    {({ isSbmitting }) => (
-                      <Form className="d-flex">
-                          <Field name='find'>
-                            {({ field, meta }) => (
-                              <>
-                                <input
-                                  {...field}
-                                  type='text'
-                                  placeholder='What are you looking for?'
-                                  className={`form-control ${meta.touched && meta.error ? 'is-invalid' : ''}`}
-                                />
-                                {meta.touched &&
-                                  <div className='invalid-feadback'>
-                                    {meta.error}
-                                  </div>
-                                }
-                              </>
-                            )}
-                          </Field>
-                          <button type='submit' className='btn outline-success' disabled={ isSbmitting }>
-                            <Icon iconname='Find' width={'24'} height={'24'} />
-                          </button>
-                        </Form>
-                    )}
-                  </Formik>
+                  <FieldForm
+                    validationSchema={validationSchemaSearch}
+                    iconname={'Find'}
+                    item={'find'}
+                    text={'What are you looking for?'}
+                    btnClassName={'outline-success'}/>
                   <Icon iconname='heart small' width={'32'} height={'32'} />
                   <Icon iconname='Cart1' width={'32'} height={'32'}/>
                 </div>
