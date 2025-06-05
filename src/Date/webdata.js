@@ -166,6 +166,27 @@ export const footerData = [
         to: '/discount',
         name: 'Save $3 with App New User Only',
       },
+      // {
+      //   type: 'img',
+      //   to: '',
+      //   name: <img src={imgCode} alt='Qr Code'/>,
+      //   wight: '76',
+      //   height: '76',
+      // },
+      // {
+      //   type: 'link-app',
+      //   to: 'https://play.google.com/store/games?device=windows',
+      //   name: <img src={imgGP} alt='Google Play'/>,
+      //   wight: '104',
+      //   height: '30',
+      // },
+      // {
+      //   type: 'link-app',
+      //   to: 'https://www.apple.com/app-store/',
+      //   name: <img src={imgAS} alt='App Store' />,
+      //   wight: '104',
+      //   height: '34',
+      // },
     ]
   }
 ];
