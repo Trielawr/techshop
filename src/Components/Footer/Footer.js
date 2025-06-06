@@ -45,7 +45,7 @@ const Footer = () => {
                   </Col>        
                 )
               }   
-              <Col>
+              {/* <Col>
                 <li className='footer-qr'>
                   <img src={imgCode} alt='QR Code' />
                 </li>
@@ -63,8 +63,8 @@ const Footer = () => {
                     /> 
                   </div>
                 </li>
-              </Col>
-              <Col>
+              </Col> */}
+              {/* <Col>
                 <li>
                   <Button
                         type={'link'}
@@ -93,7 +93,7 @@ const Footer = () => {
                         text={<Icon iconname='Icon-Linkedin' width={'32'} height={'32'} />}
                   />
                 </li>
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </ul>

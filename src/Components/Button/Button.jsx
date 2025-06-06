@@ -6,7 +6,7 @@ const Button = ({type, text, className, disabled, onClick, href}) => {
      { console.log(type)}
       {!type==='link'?
           <button
-            className={`btn ${className}`}
+            className={`btn_c ${className}`}
             disabled={disabled}
             onClick={onClick}
             type={ type || 'button' }>

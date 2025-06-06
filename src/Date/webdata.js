@@ -1,6 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '../assets/utilits';
 import { lazy } from 'react';
+import Icon from '../Components/Icon/Icon';
+import imgAS from '../assets/img/download-appstore.png';
+import imgGP from '../assets/img/download-googleplay.png';
+import imgCode from '../assets/img/Qr Code.png';
+
 
 const AllPages = lazy(() => import('../Pages/AllPages/AllPages'));
 const ErrorPage = lazy(() => import('../Pages/ErrorPage/ErrorPage'));
@@ -166,27 +171,47 @@ export const footerData = [
         to: '/discount',
         name: 'Save $3 with App New User Only',
       },
-      // {
-      //   type: 'img',
-      //   to: '',
-      //   name: <img src={imgCode} alt='Qr Code'/>,
-      //   wight: '76',
-      //   height: '76',
-      // },
-      // {
-      //   type: 'link-app',
-      //   to: 'https://play.google.com/store/games?device=windows',
-      //   name: <img src={imgGP} alt='Google Play'/>,
-      //   wight: '104',
-      //   height: '30',
-      // },
-      // {
-      //   type: 'link-app',
-      //   to: 'https://www.apple.com/app-store/',
-      //   name: <img src={imgAS} alt='App Store' />,
-      //   wight: '104',
-      //   height: '34',
-      // },
+      {
+        type: 'img',
+        to: '',
+        name: <img src={imgCode} alt='Qr Code'/>,
+        wight: '76',
+        height: '76',
+      },
+      {
+        type: 'link-app',
+        to: 'https://play.google.com/store/games?device=windows',
+        name: <img src={imgGP} alt='Google Play'/>,
+        wight: '104',
+        height: '30',
+      },
+      {
+        type: 'link-app',
+        to: 'https://www.apple.com/app-store/',
+        name: <img src={imgAS} alt='App Store' />,
+        wight: '104',
+        height: '34',
+      },
+      {
+        type: 'link-social',
+        to: 'https://www.facebook.com/',
+        name: <Icon iconname='Icon-Facebook' width={'24'} height={'24'} />,
+      },
+      {
+        type: 'link-social',
+        to: 'https://x.com/',
+        name: <Icon iconname='Icon-Twitter' width={'24'} height={'24'} />,
+      },
+      {
+        type: 'link-social',
+        to: 'https://www.instagram.com/',
+        name: <Icon iconname='icon-instagram' width={'24'} height={'24'} />,
+      },
+      {
+        type: 'link-social',
+        to: 'https://www.linkedin.com/',
+        name: <Icon iconname='Icon-Linkedin' width={'24'} height={'24'} />,
+      },
     ]
   }
 ];
