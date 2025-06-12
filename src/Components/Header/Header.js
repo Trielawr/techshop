@@ -27,8 +27,8 @@ const Header = () => {
             </div> 
           </div>
         </div>
-          <div className='container'>
-            <div className='header'>
+          <div className='header'>
+            <div className='container'>
               <div className='header-main'>
                 <NavLink to={ROUTES.home} className='header-main-logo'>Exclusive</NavLink>
                 <nav className='header-main-nav'>
