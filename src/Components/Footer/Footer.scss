@@ -1,3 +1,5 @@
+@import "../../styles/scss-variables.scss";
+
 .footer {
   background-color: var(--primary-black);
   padding: 0px;
@@ -8,10 +10,47 @@
 
   &-list {
     font-family: "Poppins";
-    display: grid;
-    grid-auto-columns: max-content;
-    grid-auto-flow: column;
     list-style-type: none;
+    display: grid;
+
+    &-row {
+      justify-content: space-between;
+      display: flex;
+
+      @media screen and (max-width: $bp-laptop) {
+        display: flex;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    &-col {
+      width: 18%;
+
+      @media screen and (max-width: $bp-laptop) {
+        width: 50%;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    &-center {
+      justify-content: center;
+      display: flex;
+
+      @media screen and (max-width: $bp-laptop) {
+        justify-content: start;
+      }
+    }
 
     &-logo {
       color: var(--primary-black);
@@ -56,15 +95,17 @@
       border-radius: 4px 0 0 4px;
       margin-top: 16px;
 
+      @media screen and (max-width: $bp-mobile) {
+        margin-bottom: 40px;
+      }
+
       input {
         background-color: transparent;
         border: 1.5px 1.5px 0 1.5px solid var(--secondary-white);
         padding: 12px 16px;
         font-weight: 400;
         font-size: 16px;
-        // min-width: min-content;
-        // max-width: max-content;
-        width: auto;
+        min-width: 100px;
 
         &:focus,
         &::placeholder {
@@ -95,10 +136,15 @@
       margin-top: 24px;
     }
 
-    // &-social {
-    //   display: inline-flex;
-    //   padding-right: min(24px, 8%);
-    // }
+    &-link:last-child {
+      @media screen and (max-width: $bp-laptop) {
+        margin-bottom: 50px;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &-copyright {
@@ -128,7 +174,6 @@
 
     &:hover {
       color: var(--secondary-gray);
-      background-color: var(--secondary-gray);
     }
   }
 
@@ -137,5 +182,27 @@
     color: var(--secondary-white);
     padding: 12px 15px;
     border-radius: 0px 4px 4px 0px;
+  }
+
+  .form-control {
+    // Біле тло при автозаповненні не розумію звідки воно приходить
+    background-color: transparent;
+    color: var(--secondary-white);
+
+    &.is-invalid {
+      background-image: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      background-color: var(--secondary-gray);
+    }
+  }
+
+  .invalid-feadback {
+    position: absolute;
+    font-size: 10px;
+    color: red;
+    margin-top: 55px;
   }
 }
