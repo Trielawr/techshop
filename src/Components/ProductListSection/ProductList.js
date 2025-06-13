@@ -3,16 +3,17 @@ import Slider from "react-slick";
 import './ProductList.scss';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Advertisement from "../Advertisement/Advertisement";
 
 const ProductList = () => {
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };     
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1
+    //   };     
   return (
       <div className='container'>
           <div  className='product'>
@@ -49,8 +50,10 @@ const ProductList = () => {
                     <Nav.Link href="#link">Health & Beauty</Nav.Link>
                 </Nav>
               </div>
+              <div className="advertisement">
               <div className="slider-container">
-                <Slider {...settings}>
+                  <p>jhjhghjgjgj</p>
+                {/* <Slider {...settings}>
                     <div>
                     <h3>1</h3>
                     </div>
@@ -69,8 +72,10 @@ const ProductList = () => {
                     <div>
                     <h3>6</h3>
                     </div>
-                </Slider>
+                </Slider> */}
              </div>
+                  
+              </div>
           </div>
     </div>
   )
