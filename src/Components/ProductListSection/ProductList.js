@@ -7,13 +7,13 @@ import Advertisement from "../Advertisement/Advertisement";
 
 const ProductList = () => {
 
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    //   };     
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };     
   return (
       <div className='container'>
           <div  className='product'>
@@ -50,33 +50,45 @@ const ProductList = () => {
                     <Nav.Link href="#link">Health & Beauty</Nav.Link>
                 </Nav>
               </div>
-              <div className="advertisement">
-              <div className="slider-container">
-                  <p>jhjhghjgjgj</p>
-                {/* <Slider {...settings}>
+              <div className="advertisement-section">
+                   
+              <div className="slider-container">           
+                 <Slider {...settings}>
                     <div>
-                    <h3>1</h3>
+                        <h3><Advertisement
+                            model={'iPhone 10 Series'}
+                            text={'Up to 30% off Voucher'}/>
+                        </h3>
                     </div>
                     <div>
-                    <h3>2</h3>
+                        <h3><Advertisement
+                                model={'iPhone 11 Series'}
+                                text={'Up to 25% off Voucher'}/>
+                        </h3>
                     </div>
                     <div>
-                    <h3>3</h3>
+                        <h3><Advertisement
+                                model={'iPhone 12 Series'}
+                                text={'Up to 20% off Voucher'}/>
+                        </h3>
                     </div>
                     <div>
-                    <h3>4</h3>
+                        <h3><Advertisement
+                                model={'iPhone 13 Series'}
+                                text={'Up to 15% off Voucher'}/>
+                        </h3>
                     </div>
                     <div>
-                    <h3>5</h3>
+                        <h3><Advertisement
+                                model={'iPhone 14 Series'}
+                                text={'Up to 10% off Voucher'}/>
+                        </h3>
                     </div>
-                    <div>
-                    <h3>6</h3>
-                    </div>
-                </Slider> */}
-             </div>
+                </Slider> 
+                   </div>
                   
               </div>
-          </div>
+          </div> 
     </div>
   )
 }
