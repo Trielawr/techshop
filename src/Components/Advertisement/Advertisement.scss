@@ -54,5 +54,9 @@
     top: 16px;
     height: 95%;
     align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      height: 80%;
+    }
   }
 }
