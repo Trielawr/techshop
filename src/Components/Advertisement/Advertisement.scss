@@ -1,13 +1,32 @@
+@import "../../styles/scss-variables.scss";
+
 .advertisement {
   background-color: var(--primary-black);
   color: var(--secondary-white);
-  padding: 58px 38px 47px 64px;
   position: relative;
   width: calc(100% - 270px);
   font-family: "Poppins";
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  overflow: hidden;
+
+  @media screen and (max-width: $bp-laptop) {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &-block {
+    padding: 58px 38px 47px 64px;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 20px 19px 25px 32px;
+    }
+  }
 
   &-header {
     display: flex;
@@ -15,6 +34,11 @@
     gap: 24px;
     padding-bottom: 20px;
     align-items: center;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 12px;
+      gap: 10px;
+    }
 
     p {
       margin: 0;
@@ -26,14 +50,30 @@
     font-weight: 600;
     font-size: 48px;
     line-height: 1.25;
-    width: 40%;
     letter-spacing: 4%;
+    padding-bottom: 22px;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 20px;
+    }
   }
 
   &-link {
     display: flex;
     flex-direction: row;
     gap: 8px;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 10px;
+    }
 
     span {
       font-family: "Poppins";
@@ -49,14 +89,12 @@
   }
 
   &-img {
-    position: absolute;
+    position: relative;
     right: 0px;
     top: 16px;
-    height: 95%;
+    bottom: -16px;
+    width: 100%;
+    height: auto;
     align-items: center;
-
-    @media screen and (max-width: 1200px) {
-      height: 80%;
-    }
   }
 }

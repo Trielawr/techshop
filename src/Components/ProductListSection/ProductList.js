@@ -56,49 +56,49 @@ const ProductList = () => {
               <div className="slider-container">           
                  <Slider {...settings}>
                     <div>
-                        <h3><Advertisement
+                        <p><Advertisement
                             model={'iPhone 10 Series'}
                                   text={'Up to 30% off Voucher'}
                                   logo={Apple}
                                   img={Phone}
                               />
-                        </h3>
+                        </p>
                     </div>
                     <div>
-                        <h3><Advertisement
+                        <p><Advertisement
                                 model={'iPhone 11 Series'}
                                 text={'Up to 25% off Voucher'}
                                 logo={Apple}
                                 img={Phone}
                             />
-                        </h3>
+                        </p>
                     </div>
                     <div>
-                        <h3><Advertisement
+                        <p><Advertisement
                                 model={'iPhone 12 Series'}
                                 text={'Up to 20% off Voucher'}
                                 logo={Apple}
                                 img={Phone}
                             />
-                        </h3>
+                        </p>
                     </div>
                     <div>
-                        <h3><Advertisement
+                        <p><Advertisement
                                 model={'iPhone 13 Series'}
                                 text={'Up to 15% off Voucher'}
                                 logo={Apple}
                                 img={Phone}
                             />
-                        </h3>
+                        </p>
                     </div>
                     <div>
-                        <h3><Advertisement
+                        <p><Advertisement
                                 model={'iPhone 14 Series'}
                                 text={'Up to 10% off Voucher'}
                                 logo={Apple}
                                 img={Phone}
                             />
-                        </h3>
+                        </p>
                     </div>
                 </Slider> 
                    </div>
