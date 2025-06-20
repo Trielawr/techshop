@@ -1,9 +1,13 @@
 import React from 'react';
-import ProductList from '../../Components/ProductListSection/ProductList';
+import ProductListSection from '../../Components/ProductListSection/ProductListSection';
+import FlashSalesSection from '../../Components/FlashSalesSection/FlashSalesSection';
 
 const AllPages = () => {
   return (
-    <div><ProductList/></div>
+    <div>
+      <ProductListSection />
+      <FlashSalesSection />
+    </div>
   )
 }
 

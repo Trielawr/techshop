@@ -1,13 +1,13 @@
 
 import Slider from "react-slick";
-import './ProductList.scss';
+import './ProductListSection.scss';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Advertisement from "../Advertisement/Advertisement";
 import Apple from '../../assets/img/Apple_gray_logo 1.png';
 import Phone from '../../assets/img/Phone.png';
 
-const ProductList = () => {
+const ProductListSection = () => {
 
     const settings = {
         dots: true,
@@ -102,11 +102,10 @@ const ProductList = () => {
                     </div>
                 </Slider> 
                    </div>
-                  
               </div>
           </div> 
     </div>
   )
 }
 
-export default ProductList;
+export default ProductListSection;

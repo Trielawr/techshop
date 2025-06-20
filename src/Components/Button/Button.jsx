@@ -3,7 +3,6 @@ import '../Button/Button.scss';
 const Button = ({type, text, className, disabled, onClick, href}) => {
   return (
     <div>
-     { console.log(type)}
       {!type==='link'?
           <button
             className={`btn_c ${className}`}
