@@ -17,9 +17,10 @@ const FlashSalesSection = () => {
       <ProductCard
         text='HAVIT HV-G92 Gamepad'
         sale={'40'}
-        prize={'160'}
-        iconname=''
-        imgname={'havit'} />
+        price={'160'}
+        iconname={'Five star'}
+        imgname={'havit'}
+        reviews={'88'}/>
     </div>
   )
 }
