@@ -20,6 +20,11 @@
     position: absolute;
     top: 12px;
     right: 12px;
+    list-style: none;
+  }
+
+  &-hearticon:hover {
+    background-color: var(--secondary-ligth-gray);
   }
 
   &:hover {
@@ -42,6 +47,14 @@
 
   &-newprice {
     color: red;
+  }
+
+  &-noprice {
+    display: none;
+  }
+
+  &-regularprice {
+    color: var(--primary-black);
   }
 
   &-reviews {
@@ -76,6 +89,10 @@
 }
 
 .sale {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
   position: absolute;
   top: 12px;
   left: 12px;

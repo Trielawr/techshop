@@ -3,6 +3,7 @@
 .flash-sales {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  margin-bottom: 40px;
 
   @media screen and (max-width: $bp-laptop) {
     grid-template-columns: 1fr;
@@ -27,4 +28,69 @@
       }
     }
   }
+}
+
+.flash-slider .slick-arrow {
+  transition: background-color 0.3s ease;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  background-color: var(--secondary-ligth-gray);
+  border-radius: 50%;
+  display: block;
+  border: none;
+  height: 46px;
+  width: 46px;
+  z-index: 20;
+  margin: 0 -30px;
+
+  &:before {
+    display: none;
+  }
+
+  &:focus {
+    background-color: var(--primary-white);
+  }
+
+  &:hover {
+    background-color: var(--secondary-super-light-gray);
+  }
+
+  &.slick-prev {
+    left: 800px;
+    top: -70px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: 0;
+    }
+  }
+
+  &.slick-next {
+    right: 0px;
+    top: -70px;
+
+    @media screen and (max-width: $bp-tablet) {
+      right: 0;
+    }
+  }
+
+  svg {
+    position: absolute;
+    display: block;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+}
+
+.right-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
