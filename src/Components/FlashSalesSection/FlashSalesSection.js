@@ -12,11 +12,11 @@ const FlashSalesSection = () => {
     const { className, onClick } = props;
     return (
       <button
-        type="button"
+        type='button'
         className={className}
         onClick={onClick}
       >
-        <Icon iconname="icons arrow-right" width={'24'} height={'24'}/>
+        jhjhj
       </button>
     );
   }
@@ -29,7 +29,8 @@ const FlashSalesSection = () => {
         className={className}
         onClick={onClick}
       >
-        <Icon iconname="icons_arrow-left" width={'24'} height={'24'}/>
+        4444
+        {/* <Icon iconname="icons_arrow-left" width={'24'} height={'24'}/> */}
       </button>
     );
   }
@@ -38,7 +39,7 @@ const FlashSalesSection = () => {
       dots: true,
       infinite: true,
       dots: false,
-      slidesToShow: 2,
+      slidesToShow: 4,
       slidesToScroll: 1,
       swipeToSlide: true,
       nextArrow: <NextArrow />,
