@@ -1,6 +1,7 @@
 @import "../../styles/scss-variables.scss";
 
 .flash-sales {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin-bottom: 40px;
@@ -30,43 +31,50 @@
   }
 }
 
-.flash-slider .slick-arrow {
-  transition: background-color 0.3s ease;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-  background-color: var(--secondary-ligth-gray);
-  border-radius: 50%;
-  display: block;
-  border: none;
-  height: 46px;
-  width: 46px;
-  margin: 0 -30px;
+.flash-slider {
+  width: 100vw;
+  margin-right: calc((100vw - 100%) / 2);
+}
 
-  &:before {
-    content: url("../../assets/svg/Icon/icons_arrow-left.svg");
-  }
+.arrows {
+  &-custom {
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    background-color: var(--secondary-ligth-gray);
+    border-radius: 50%;
+    display: block;
+    border: none;
+    height: 46px;
+    width: 46px;
+    padding: 0;
 
-  &:hover {
-    background-color: var(--secondary-super-light-gray);
-  }
-
-  &.slick-prev {
-    left: 90%;
-    top: -74px;
-    // margin-right: 10px;
-
-    //   // @media screen and (max-width: $bp-tablet) {
-    //   //   left: 0;
-    //   // }
-  }
-
-  &.slick-next {
-    left: 96%;
-    top: -27%;
-    transform: rotate(180deg);
-    // margin-left: 10px;
-
-    @media screen and (max-width: $bp-tablet) {
-      right: 0;
+    &:hover {
+      background-color: var(--primary-white);
     }
+
+    &-next,
+    &-prev {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 17px;
+    }
+
+    &-prev {
+      right: 0px;
+    }
+
+    &-next {
+      right: 54px;
+    }
+  }
+
+  &-icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+  }
+
+  &-wrapper .icon {
+    display: inline;
   }
 }

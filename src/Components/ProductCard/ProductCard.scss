@@ -1,4 +1,6 @@
 .product-card {
+  padding-right: 30px;
+
   &-img {
     position: relative;
     display: inline-block;
@@ -13,6 +15,10 @@
     position: relative;
   }
 
+  & .card {
+    border: none;
+  }
+
   &-icons {
     display: flex;
     flex-direction: column;
@@ -24,10 +30,6 @@
   }
 
   &-hearticon:hover {
-    background-color: var(--secondary-ligth-gray);
-  }
-
-  &:hover {
     background-color: var(--secondary-ligth-gray);
   }
 

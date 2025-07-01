@@ -3,7 +3,7 @@
 .sales-block {
   display: flex;
   justify-content: start;
-  margin-top: 3rem;
+  margin-top: 50px;
 
   @media screen and (max-width: $bp-laptop) {
     margin: 10px 0px;
@@ -13,7 +13,6 @@
 .countdown {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
-  // justify-content: start;
   margin: 0px;
   gap: 38px;
 
@@ -61,8 +60,5 @@
       position: relative;
       left: 0;
     }
-  }
-
-  .mt-5 {
   }
 }

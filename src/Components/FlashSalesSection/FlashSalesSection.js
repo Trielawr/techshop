@@ -1,49 +1,50 @@
-import React from 'react';
+import { useRef} from 'react';
 import CategoryDivider from '../CategoryDivider/CategoryDivider';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import ProductCard from '../ProductCard/ProductCard';
+import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Slider from "react-slick";
 import './FlashSalesSection.scss'
 
 const FlashSalesSection = () => {
 
-  function NextArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <button
-        type='button'
-        className={className}
-        onClick={onClick}
-      >
-        jhjhj
-      </button>
-    );
-  }
+  const sliderRef = useRef(null);
+
+  // function NextArrow(props) {
+  //   const { className, onClick } = props;
+  //   return (
+  //     <button
+  //       type='button'
+  //       className={className}
+  //       onClick={onClick}
+  //     >
+  //     </button>
+  //   );
+  // }
   
-  function PrevArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <button
-        type="button"
-        className={className}
-        onClick={onClick}
-      >
-        4444
-        {/* <Icon iconname="icons_arrow-left" width={'24'} height={'24'}/> */}
-      </button>
-    );
-  }
+  // function PrevArrow(props) {
+  //   const { className, onClick } = props;
+  //   return (
+  //     <button
+  //       type="button"
+  //       className={className}
+  //       onClick={onClick}
+  //     >
+  //     </button>
+  //   );
+  // }
   
     const settings = {
-      dots: true,
-      infinite: true,
+      infinite: false,
       dots: false,
-      slidesToShow: 4,
+      centerMode: false,
+      slidesToShow: 1,
       slidesToScroll: 1,
       swipeToSlide: true,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />
+      variableWidth: true
+      // nextArrow: <NextArrow />,
+      // prevArrow: <PrevArrow />
     };
 
   return (
@@ -53,10 +54,22 @@ const FlashSalesSection = () => {
             <CategoryDivider text={"Today's"} />
             <h2>Flash Sales</h2>
         </div>
-        <CountdownTimer targetDate='2025-07-31T23:59:59'/>
+        <CountdownTimer targetDate='2025-07-31T23:59:59' />
+        <div className='arrows-wrapper' >
+          <button
+            className='arrows-custom arrows-custom-prev'  
+            onClick={()=> sliderRef.current.slickPrev() }>
+            <Icon iconname={'icons arrow-right'} width={'24'} height={'24'}/>
+          </button>
+          <button
+            className='arrows-custom arrows-custom-next'
+            onClick={()=> sliderRef.current.slickNext() }>
+            <Icon iconname={'icons_arrow-left'} width={'24'} height={'24'}/>
+          </button>
+        </div>
       </div>
       <div className="slider-container flash-slider">
-        <Slider {...settings}>
+        <Slider  ref={sliderRef} {...settings}>
           <div>
             <h3>
               <ProductCard
@@ -125,6 +138,11 @@ const FlashSalesSection = () => {
           </div>
         </Slider>
       </div>
+      <Button
+        type={'button'}
+        text='View All Products'
+        // onClick={onClick}
+      />
     </div>
   )
 }
