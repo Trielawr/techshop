@@ -1,24 +1,27 @@
 import '../Button/Button.scss';
 
-const Button = ({type, text, className, disabled, onClick, href}) => {
+const Button = ({ type, text, className, disabled, onClick, href }) => {
+  console.log('type', type);
   return (
-    <div>
-      {!type==='link'?
-          <button
-            className={`btn ${className}`}
-            disabled={disabled}
-            onClick={onClick}
-            type={ type || 'button' }>
-            { text }
-          </button> 
-        :
+    <>
+      {type === 'link' &&
         <a
-        className={className}
-        href={`${href}`}>
-        { text }
+          className={className}
+          href={`${href}`}>
+          { text }
         </a>
       }
-    </div>
+      {type === 'button' &&
+        <button
+          className={`botn ${className}`}
+          disabled={disabled}
+          onClick={onClick}
+          // type={type || 'button'}
+        >
+          { text }
+        </button> 
+      }
+    </>
   )
 }
 

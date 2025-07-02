@@ -1,39 +1,17 @@
-import { useRef} from 'react';
+import React, { useRef} from 'react';
 import CategoryDivider from '../CategoryDivider/CategoryDivider';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import ProductCard from '../ProductCard/ProductCard';
+import { ROUTES } from '../../assets/utilits';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Slider from "react-slick";
 import './FlashSalesSection.scss'
+import { NavLink } from 'react-bootstrap';
 
 const FlashSalesSection = () => {
 
   const sliderRef = useRef(null);
-
-  // function NextArrow(props) {
-  //   const { className, onClick } = props;
-  //   return (
-  //     <button
-  //       type='button'
-  //       className={className}
-  //       onClick={onClick}
-  //     >
-  //     </button>
-  //   );
-  // }
-  
-  // function PrevArrow(props) {
-  //   const { className, onClick } = props;
-  //   return (
-  //     <button
-  //       type="button"
-  //       className={className}
-  //       onClick={onClick}
-  //     >
-  //     </button>
-  //   );
-  // }
   
     const settings = {
       infinite: false,
@@ -43,8 +21,6 @@ const FlashSalesSection = () => {
       slidesToScroll: 1,
       swipeToSlide: true,
       variableWidth: true
-      // nextArrow: <NextArrow />,
-      // prevArrow: <PrevArrow />
     };
 
   return (
@@ -138,11 +114,14 @@ const FlashSalesSection = () => {
           </div>
         </Slider>
       </div>
-      <Button
-        type={'button'}
-        text='View All Products'
-        // onClick={onClick}
-      />
+      <div className='botn-allproducts'>
+        <Button
+          className='botn-orange'
+          text='View All Products'
+          type='button'
+          onClick={()=> <NavLink to={ROUTES.error}/>}
+        />
+      </div>
     </div>
   )
 }

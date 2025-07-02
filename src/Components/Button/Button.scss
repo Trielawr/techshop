@@ -1,17 +1,17 @@
-.btn {
+.botn {
   padding: 16px 48px;
   border-radius: 4px;
   line-height: 1.5;
   font-size: 16px;
 
   &-orange {
-    background-color: var(--primary-pink);
-    border: 1px solid var(--primary-pink);
+    background-color: var(--button-pink);
+    border: 1px solid var(--button-pink);
     color: var(--secondary-white);
 
     &:hover {
-      background-color: var(--secondary-pink);
-      border: 1px solid var(--secondary-pink);
+      background-color: var(--button-hover-pink);
+      border: 1px solid var(--button-hover-pink);
     }
   }
 
