@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductListSection from '../../Components/ProductListSection/ProductListSection';
-import FlashSalesSection from '../../Components/FlashSalesSection/FlashSalesSection';
-import CategorySection from '../../Components/CategorySection/CategorySection';
+import ProductListSection from '../../Components/Section/ProductListSection/ProductListSection';
+import FlashSalesSection from '../../Components/Section/FlashSalesSection/FlashSalesSection';
+import CategorySection from '../../Components/Section/CategorySection/CategorySection';
 
 const AllPages = () => {
   return (

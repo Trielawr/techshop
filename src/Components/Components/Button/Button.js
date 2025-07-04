@@ -1,4 +1,4 @@
-import '../Button/Button.scss';
+import './Button.scss';
 
 const Button = ({ type, text, className, disabled, onClick, href }) => {
   console.log('type', type);

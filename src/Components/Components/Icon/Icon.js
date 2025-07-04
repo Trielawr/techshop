@@ -1,5 +1,5 @@
 import React from 'react';
-import sprite from '../../assets/svg/sprite.svg';
+import sprite from '../../../assets/svg/sprite.svg';
 import './Icon.scss'
 
 const Icon = ({ iconname, width, height }) => {

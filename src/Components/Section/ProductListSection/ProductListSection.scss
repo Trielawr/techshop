@@ -1,4 +1,4 @@
-@import "../../styles/scss-variables.scss";
+@import "../../../styles/scss-variables.scss";
 
 .product {
   display: flex;
@@ -73,7 +73,7 @@
     height: calc(1em + 1lh);
 
     &::after {
-      content: url("../../assets/svg/Icon/DropDown.svg");
+      content: url("../../../assets/svg/Icon/DropDown.svg");
       position: absolute;
       right: 0;
       top: 5px;
@@ -116,13 +116,13 @@
   }
 
   & li button:before {
-    content: url("../../assets/svg/Icon/Ellipse white.svg");
+    content: url("../../../assets/svg/Icon/Ellipse white.svg");
     background-repeat: no-repeat;
     opacity: 0.5;
   }
 
   & li.slick-active button:before {
-    content: url("../../assets/svg/Icon/Ellipse-red.svg");
+    content: url("../../../assets/svg/Icon/Ellipse-red.svg");
     opacity: 1;
   }
 }

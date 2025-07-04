@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CategoryDivider/CategoryDivider.scss';
+import './CategoryDivider.scss';
 
 const CategoryDivider = ({ text }) => {
   return (

@@ -1,10 +1,10 @@
-import '../Header/Header.scss';
+import './Header.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Icon from '../Icon/Icon';
+import Icon from '../../Components/Icon/Icon';
 import { NavLink } from 'react-router-dom';
-import { ROUTES, validationSchemaSearch} from '../../assets/utilits';
-import FieldForm from '../FieldForm/FieldForm';
+import { ROUTES, validationSchemaSearch} from '../../../assets/utilits';
+import FieldForm from '../../Components/FieldForm/FieldForm';
 
 const Header = () => {
   return (  

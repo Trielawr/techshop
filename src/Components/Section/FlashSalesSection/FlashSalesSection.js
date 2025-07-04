@@ -1,13 +1,16 @@
 import React, { useRef} from 'react';
-import CategoryDivider from '../CategoryDivider/CategoryDivider';
-import CountdownTimer from '../CountdownTimer/CountdownTimer';
-import ProductCard from '../ProductCard/ProductCard';
-import { ROUTES } from '../../assets/utilits';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import CategoryDivider from '../../Components/CategoryDivider/CategoryDivider';
+import CountdownTimer from '../../Components/CountdownTimer/CountdownTimer';
+import ProductCard from '../../Components/ProductCard/ProductCard';
+import { ROUTES } from '../../../assets/utilits';
+import Carusel from '../../Components/Carusel/Carusel';
+import Icon from '../../Components/Icon/Icon';
 import Slider from "react-slick";
 import './FlashSalesSection.scss'
 import { NavLink } from 'react-bootstrap';
+import { productData } from '../../../Date/productdata';
+import CaruselButton from '../../Components/Carusel/CaruselButton';
+import Button from '../../Components/Button/Button';
 
 const FlashSalesSection = () => {
 
@@ -31,7 +34,14 @@ const FlashSalesSection = () => {
             <h2>Flash Sales</h2>
         </div>
         <CountdownTimer targetDate='2025-07-31T23:59:59' />
-        <div className='arrows-wrapper' >
+        <CaruselButton/>
+      </div> 
+        <div>
+        <Carusel
+          CaruselItem={productData}
+        />
+        </div>
+        {/* <div className='arrows-wrapper' >
           <button
             className='arrows-custom arrows-custom-prev'  
             onClick={()=> sliderRef.current.slickPrev() }>
@@ -112,8 +122,8 @@ const FlashSalesSection = () => {
                   reviews={'75'}/>
             </h3>
           </div>
-        </Slider>
-      </div>
+        </Slider>*/}
+
       <div className='botn-allproducts'>
         <Button
           className='botn-orange'

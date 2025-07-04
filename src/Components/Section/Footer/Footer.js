@@ -1,13 +1,13 @@
 import '../Footer/Footer.scss';
 import { NavLink } from 'react-router-dom';
-import { ROUTES, validationSchemaEmail } from '../../assets/utilits';
-import { footerData } from '../../Date/webdata';
-import Icon from '../Icon/Icon';
+import { ROUTES, validationSchemaEmail } from '../../../assets/utilits';
+import { footerData } from '../../../Date/webdata';
+import Icon from '../../Components/Icon/Icon';
 import FooterLinkList from './FooterLinkList';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FieldForm from '../FieldForm/FieldForm';
+import FieldForm from '../../Components/FieldForm/FieldForm';
 
 const Footer = () => {
   return (

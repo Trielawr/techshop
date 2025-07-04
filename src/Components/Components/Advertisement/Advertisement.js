@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ROUTES } from '../../assets/utilits';
+import { ROUTES } from '../../../assets/utilits';
 import './Advertisement.scss';
 import Icon from '../Icon/Icon';
 

@@ -1,4 +1,4 @@
-import Button from '../Button/Button';
+import Button from '../../Components/Button/Button';
 import '../Footer/Footer.scss';
 
 const FooterLinkList = ({ item }) => {

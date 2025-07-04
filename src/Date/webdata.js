@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '../assets/utilits';
 import { lazy } from 'react';
-import Icon from '../Components/Icon/Icon';
+import Icon from '../Components/Components/Icon/Icon';
 import imgAS from '../assets/img/download-appstore.png';
 import imgGP from '../assets/img/download-googleplay.png';
 import imgCode from '../assets/img/Qr Code.png';

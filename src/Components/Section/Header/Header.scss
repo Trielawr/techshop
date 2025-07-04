@@ -1,4 +1,4 @@
-@import "../../styles/scss-variables.scss";
+@import "../../../styles/scss-variables.scss";
 
 .header-back {
   background-color: var(--primary-black);
@@ -84,7 +84,7 @@
   }
 
   &-toggle::after {
-    content: url("../../assets/svg/Icon/DropDown.svg");
+    content: url("../../../assets/svg/Icon/DropDown.svg");
     color: var(--primary-white);
     vertical-align: -0.4em;
     border: none;
