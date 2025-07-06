@@ -38,7 +38,9 @@ const FlashSalesSection = () => {
       </div> 
         <div>
         <Carusel
-          CaruselItem={productData}
+          caruselDate={productData}
+          CaruselItem={ProductCard}
+          className={'flash-slider'}
         />
         </div>
         {/* <div className='arrows-wrapper' >

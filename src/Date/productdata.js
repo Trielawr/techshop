@@ -54,3 +54,52 @@ export const productData = [
     reviews: '50'
  }
 ]
+
+export const categoryData = [
+  {
+    id: 1,
+    text: 'Phone',
+    iconname: 'CellPhone',
+  },
+  {
+    id: 2,
+    text: 'Computers',
+    iconname: 'Computer',
+  },
+  {
+    id: 3,
+    text: 'SmartWatch',
+    iconname: 'SmartWatch',
+  },
+  {
+    id: 4,
+    text: 'Camera',
+    iconname: 'Camera',
+  },
+  {
+    id: 5,
+    text: 'Headphones',
+    iconname: 'Headphone',
+  },
+  {
+    id: 6,
+    text: 'Gaming',
+    iconname: 'Gamepad',
+  },
+  {
+    id: 7,
+    text: 'Camera',
+    iconname: 'Camera',
+  },
+  {
+    id: 8,
+    text: 'SmartWatch',
+    iconname: 'SmartWatch',
+  },
+  {
+    id: 9,
+    text: 'Phone',
+    iconname: 'CellPhone',
+  }
+]
+  
