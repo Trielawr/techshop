@@ -1,7 +1,10 @@
 @import "../../../styles/scss-variables.scss";
 
+.flash-container {
+  position: relative;
+}
+
 .flash-sales {
-  // position: relative;
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin-bottom: 40px;
@@ -35,62 +38,31 @@
 .flash-slider {
   width: 100vw;
   margin-right: calc((100vw - 100%) / 2);
-}
 
-.arrows {
-  &-custom {
-    transition: background-color 0.3s ease;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-    background-color: var(--secondary-ligth-gray);
-    border-radius: 50%;
-    display: block;
-    border: none;
-    height: 46px;
-    width: 46px;
-    padding: 0;
+  & .arrows-custom-next,
+  & .arrows-custom-prev {
+    position: absolute;
+    top: 70px;
 
-    &:hover {
-      background-color: var(--primary-white);
-    }
-
-    &-next,
-    &-prev {
-      position: absolute;
-      bottom: 0;
-      // top: 0;
-      margin-bottom: 17px;
-
-      @media screen and (max-width: $bp-tablet) {
-        bottom: -40px;
-        right: 0;
-      }
-    }
-
-    &-prev {
-      right: 0px;
-
-      @media screen and (max-width: $bp-tablet) {
-        left: 54px;
-      }
-    }
-
-    &-next {
-      right: 54px;
-
-      @media screen and (max-width: $bp-tablet) {
-        left: 0px;
-      }
+    @media screen and (max-width: $bp-tablet) {
+      top: 190px;
     }
   }
 
-  &-icon {
-    position: relative;
-    top: 50%;
-    left: 50%;
+  & .arrows-custom-prev {
+    right: 0px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: 76px;
+    }
   }
 
-  &-wrapper .icon {
-    display: inline;
+  & .arrows-custom-next {
+    right: 58px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: 10px;
+    }
   }
 }
 

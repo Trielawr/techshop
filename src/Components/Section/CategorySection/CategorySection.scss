@@ -1,5 +1,44 @@
+@import "../../../styles/scss-variables.scss";
+
 .category {
+  position: relative;
   margin: 80px 0 70px 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--primary-black);
+    opacity: 0.3;
+    margin-top: 70px;
+  }
+
+  & .arrows-custom-next,
+  & .arrows-custom-prev {
+    position: absolute;
+    top: 70px;
+
+    @media screen and (max-width: $bp-tablet) {
+      top: 125px;
+    }
+  }
+
+  & .arrows-custom-prev {
+    right: 0px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: 76px;
+    }
+  }
+
+  & .arrows-custom-next {
+    right: 58px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: 10px;
+    }
+  }
 
   & .container {
     padding: 0;
