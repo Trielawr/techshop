@@ -1,0 +1,46 @@
+@import "../../../styles/scss-variables.scss";
+
+.bestselling {
+  h2 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 4%;
+    color: var(--primary-black);
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &-products {
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+
+    li {
+      flex: 0 0 auto;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px 0 60px 0;
+
+    @media screen and (max-width: $bp-tablet) {
+      flex-direction: column;
+    }
+
+    & .botn-orange {
+      @media screen and (max-width: $bp-tablet) {
+        width: fit-content;
+        margin: 20px auto;
+      }
+    }
+  }
+}

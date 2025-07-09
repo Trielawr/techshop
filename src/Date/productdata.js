@@ -6,7 +6,8 @@ export const productData = [
     price: '160',
     iconname: 'Five star',
     imgname: 'havit',
-    reviews: '88'
+    reviews: '88',
+    salesrating: '10'
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const productData = [
     price: '1160',
     iconname: 'Four Star',
     imgname: 'wired keyboard',
-    reviews: '75'
+    reviews: '75',
+    salesrating: '1'
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export const productData = [
     price: '400',
     iconname: 'Five star',
     imgname: 'gaming monitor',
-    reviews: '99'
+    reviews: '99',
+    salesrating: '4'
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const productData = [
     price: '400',
     iconname: 'Four Half Star',
     imgname: 'comfort chair',
-    reviews: '99'
+    reviews: '99',
+    salesrating: '3'
  },
   {
     id: 5,
@@ -42,7 +46,8 @@ export const productData = [
     price: '180',
     iconname: 'Five star',
     imgname: 'havit',
-    reviews: '90'
+    reviews: '90',
+    salesrating: '1'
  },
  {
     id: 6,
@@ -51,8 +56,49 @@ export const productData = [
     price: '1060',
     iconname: 'Four Star',
     imgname: 'wired keyboard',
-    reviews: '50'
- }
+    reviews: '50',
+    salesrating: '4'
+  },
+  {
+    id: 7,
+    text: 'The north coat',
+    sale: '',
+    price: '360',
+    iconname: 'Five star',
+    imgname: 'coat',
+    reviews: '65',
+    salesrating: '10'
+  },
+  {
+    id: 8,
+    text: 'Gucci duffle bag',
+    sale: '15',
+    price: '1160',
+    iconname: 'Four Half Star',
+    imgname: 'gucci bag',
+    reviews: '65',
+    salesrating: '8'
+  },
+  {
+    id: 9,
+    text: 'RGB liquid CPU Cooler',
+    sale: '15',
+    price: '170',
+    iconname: 'Four Half Star',
+    imgname: 'cpu cooler',
+    reviews: '65',
+    salesrating: '9'
+  },
+  {
+    id: 10,
+    text: 'Small BookSelf',
+    sale: '',
+    price: '360',
+    iconname: 'Five star',
+    imgname: 'bookshell',
+    reviews: '65',
+    salesrating: '7'
+  }
 ]
 
 export const categoryData = [

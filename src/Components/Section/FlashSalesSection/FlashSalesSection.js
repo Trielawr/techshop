@@ -10,7 +10,11 @@ import { productData } from '../../../Date/productdata';
 import Button from '../../Components/Button/Button';
 
 const FlashSalesSection = () => {
-return (
+
+  // Filter products to get only those which are on sale
+  const flashSalesProducts = productData.filter(product => product.sale !== '');
+
+  return (
     <div className='container flash-container'>
       <div className='flash-sales'>
         <div className='flash-sales-header'>
@@ -21,7 +25,7 @@ return (
       </div> 
       <div>
         <Carusel
-          caruselDate={productData}
+          caruselDate={flashSalesProducts}
           CaruselItem={ProductCard}
           className={'flash-slider'}
         />
