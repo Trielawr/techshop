@@ -21,7 +21,7 @@ const BestSellingSection = () => {
             type='button'
             className='botn-orange'
             text='View All'
-            onClick={() => <NavLink to="ROUTER.error"/>}
+            onClick={() => <NavLink to={ROUTER.error} />}
           />
         </div>
         <ul className='bestselling-products'>

@@ -52,15 +52,16 @@ const ProductListSection = () => {
                     <Nav.Link href="#link">Health & Beauty</Nav.Link>
                 </Nav>
               </div>
-              <div className="advertisement-section">          
+              <div className="product-advertisement">          
               <div className="slider-container">           
                  <Slider {...settings}>
                     <div>
                         <p><Advertisement
-                            model={'iPhone 10 Series'}
-                                  text={'Up to 30% off Voucher'}
-                                  logo={Apple}
-                                  img={Phone}
+                                model={'iPhone 10 Series'}
+                                text={'Up to 30% off Voucher'}
+                                buttontype={'link'}
+                                logo={Apple}
+                                img={Phone}
                               />
                         </p>
                     </div>
@@ -68,6 +69,7 @@ const ProductListSection = () => {
                         <p><Advertisement
                                 model={'iPhone 11 Series'}
                                 text={'Up to 25% off Voucher'}
+                                buttontype={'link'}
                                 logo={Apple}
                                 img={Phone}
                             />
@@ -77,6 +79,7 @@ const ProductListSection = () => {
                         <p><Advertisement
                                 model={'iPhone 12 Series'}
                                 text={'Up to 20% off Voucher'}
+                                buttontype={'link'}
                                 logo={Apple}
                                 img={Phone}
                             />
@@ -86,6 +89,7 @@ const ProductListSection = () => {
                         <p><Advertisement
                                 model={'iPhone 13 Series'}
                                 text={'Up to 15% off Voucher'}
+                                buttontype={'link'}
                                 logo={Apple}
                                 img={Phone}
                             />
@@ -95,6 +99,7 @@ const ProductListSection = () => {
                         <p><Advertisement
                                 model={'iPhone 14 Series'}
                                 text={'Up to 10% off Voucher'}
+                                buttontype={'link'}
                                 logo={Apple}
                                 img={Phone}
                             />

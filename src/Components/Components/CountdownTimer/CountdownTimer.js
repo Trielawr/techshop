@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './CountdownTimer.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CountdownTimer = ({ targetDate }) => {
+const CountdownTimer = ({ targetDate, dots }) => {
     
     const calculateTimeLeft = () => {
         const difference = + new Date(targetDate) - + new Date();
@@ -34,19 +34,22 @@ const CountdownTimer = ({ targetDate }) => {
                 { Object.keys(timeLeft).length === 0 ? 
                     (<div className="col-12 text-danger fw-bold"> Time's up </div>)
                     :
-                    (
-                       <ul className="countdown" >
-                        {Object.entries(timeLeft).map((unit, index) => (
+                    ( <ul className="countdown" >
+                         {Object.entries(timeLeft).map((unit, index) => (    
                             <div className="countdown-block col fw-bold" key={index}>
                                 <p className="countdown-title text-capitalize">{unit[0]}</p>                          
                                 <div className="countdown-timer">
                                     <li className="countdown-timer-count text-uppercase">{(unit[1].toString().padStart('2', "0"))}</li>                         
-                                    { unit[0]!=='seconds' && <p className="countdown-timer-dots text-uppercase">{':'}</p>}
+                                     { dots &&
+                                         <div> {unit[0] !== 'seconds' &&
+                                             <p className="countdown-timer-dots text-uppercase">{':'}</p>}
+                                         </div>
+                                     }
                                 </div>
-                               
-                            </div>
-                        ))}       
-                    </ul>)
+                             </div>
+                         ))}  
+                      </ul>
+                      )
                     }
               </div>
         </div> 
