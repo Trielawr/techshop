@@ -21,7 +21,7 @@ const FlashSalesSection = () => {
             <CategoryDivider text={"Today's"} />
             <h2>Flash Sales</h2>
         </div>
-        <CountdownTimer targetDate='2025-07-31T23:59:59' dots={'true'} />
+        <CountdownTimer targetDate='2025-10-30T23:59:59' dots={'true'} />
       </div> 
       <div>
         <Carusel

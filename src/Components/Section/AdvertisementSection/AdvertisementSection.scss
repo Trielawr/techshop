@@ -1,5 +1,16 @@
+@import "../../../styles/scss-variables.scss";
+
 .advertisement-section {
   background-color: var(--primary-black);
+  margin-bottom: 71px;
+
+  & .advertisement-block {
+    padding: 69px 27px 69px 56px;
+  }
+
+  & .countdown {
+    gap: 24px;
+  }
 
   & .countdown-block {
     display: flex;
@@ -42,8 +53,37 @@
   }
 
   & .advertisement-img {
-    padding: 37px 44px 43px 0px;
+    padding: 45px 16px;
+    margin: 37px 44px 43px 0px;
     position: relative;
     top: 0;
+    filter: drop-shadow(0px 0px 100px rgba(217, 217, 217, 0.3));
+
+    @media screen and (max-width: $bp-tablet) {
+      width: 80%;
+    }
+  }
+
+  & .advertisement-header {
+    padding-bottom: 32px;
+
+    h5 {
+      margin-bottom: 0px;
+    }
+  }
+
+  & .advertisement-main {
+    padding-bottom: 32px;
+    margin-bottom: 0px;
+  }
+
+  & .sales-block {
+    height: fit-content;
+    padding-bottom: 40px;
+    margin: 0px;
+  }
+
+  & .countdown-block {
+    margin: 0px;
   }
 }

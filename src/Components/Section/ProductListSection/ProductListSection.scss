@@ -99,6 +99,20 @@
   @media screen and (max-width: $bp-laptop) {
     margin: 0;
   }
+
+  & .advertisement-img {
+    position: relative;
+    right: 0px;
+    top: 16px;
+    bottom: -16px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  // & .advertisement-header {
+  //   margin-bottom: 0px;
+  // }
 }
 
 .slick-dots {

@@ -86,15 +86,9 @@
     span {
       color: var(--secondary-white);
     }
-  }
 
-  &-img {
-    position: relative;
-    right: 0px;
-    top: 16px;
-    bottom: -16px;
-    width: 100%;
-    height: auto;
-    align-items: center;
+    span:hover {
+      color: var(--secondary-gray);
+    }
   }
 }

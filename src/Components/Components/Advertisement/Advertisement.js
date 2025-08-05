@@ -17,7 +17,7 @@ const Advertisement = ({ model, countdown,buttontype, text, logo, img }) => {
             <h5>{model}</h5>  
           </div>
           <p className='advertisement-main'>{text}</p>
-          {countdown && <CountdownTimer targetDate='2025-07-31T23:59:59' />}
+          {countdown && <CountdownTimer targetDate='2025-10-30T23:59:59' />}
           {buttontype ==='link' &&  
             <div className='advertisement-link'>
               <span>Shop Now</span>
