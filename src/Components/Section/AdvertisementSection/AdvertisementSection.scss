@@ -48,8 +48,13 @@
 
   & .advertisement {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: $bp-laptop) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   & .advertisement-img {
@@ -57,10 +62,12 @@
     margin: 37px 44px 43px 0px;
     position: relative;
     top: 0;
+    width: clamp(568px, 100%, 200px);
     filter: drop-shadow(0px 0px 100px rgba(217, 217, 217, 0.3));
 
-    @media screen and (max-width: $bp-tablet) {
-      width: 80%;
+    @media screen and (max-width: $bp-laptop) {
+      margin: 0px;
+      padding: 0px 32px 32px 32px;
     }
   }
 
@@ -75,15 +82,48 @@
   & .advertisement-main {
     padding-bottom: 32px;
     margin-bottom: 0px;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 30px;
+    }
   }
 
   & .sales-block {
     height: fit-content;
     padding-bottom: 40px;
     margin: 0px;
+
+    @media screen and (max-width: $bp-tablet) {
+      position: relative;
+      right: 10px;
+    }
   }
 
   & .countdown-block {
     margin: 0px;
+  }
+
+  & .container {
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0px;
+      display: flex;
+      margin: 0px;
+    }
+  }
+
+  & .countdown-timer {
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 10px;
+    }
+  }
+
+  & .botn-green {
+    @media screen and (max-width: $bp-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto;
+      width: fit-content;
+    }
   }
 }
