@@ -2,7 +2,7 @@ import React, { useRef} from 'react';
 import CategoryDivider from '../../Components/CategoryDivider/CategoryDivider';
 import CountdownTimer from '../../Components/CountdownTimer/CountdownTimer';
 import ProductCard from '../../Components/ProductCard/ProductCard';
-import { ROUTES } from '../../../assets/utilits';
+import { ROUTES, settings } from '../../../assets/utilits';
 import Carusel from '../../Components/Carusel/Carusel';
 import './FlashSalesSection.scss'
 import { NavLink } from 'react-bootstrap';
@@ -28,6 +28,7 @@ const FlashSalesSection = () => {
           caruselDate={flashSalesProducts}
           CaruselItem={ProductCard}
           className={'flash-slider'}
+          settings={settings}
         />
       </div>
       <div className='botn-allproducts'>

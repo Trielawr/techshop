@@ -3,20 +3,10 @@ import Slider from "react-slick";
 import Icon from '../Icon/Icon';
 import './Carusel.scss'
 
-const Carusel = ({ caruselDate, CaruselItem, className }) => {
+const Carusel = ({ caruselDate, CaruselItem, className, settings }) => {
 
     const sliderRef = useRef(null);
 
-    const settings = {
-        infinite: false,
-        dots: false,
-        centerMode: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-        variableWidth: true
-    };
-    
   return (
     <div className='container'>
       <div className={`slider-container ${className}`}>

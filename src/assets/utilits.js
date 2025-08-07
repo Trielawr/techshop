@@ -27,3 +27,24 @@ export const ROUTES = {
     error: "/404 Error",
     productdetailpage: "/productdetailpage",
 };
+
+export const settings = {
+        infinite: false,
+        dots: false,
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        variableWidth: true
+};
+    
+export const multisettings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    rows: 2,
+    slidesPerRow: 2
+  };

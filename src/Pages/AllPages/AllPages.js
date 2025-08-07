@@ -4,6 +4,7 @@ import FlashSalesSection from '../../Components/Section/FlashSalesSection/FlashS
 import CategorySection from '../../Components/Section/CategorySection/CategorySection';
 import BestSellingSection from '../../Components/Section/BestSellingSection/BestSellingSection';
 import AdvertisementSection from '../../Components/Section/AdvertisementSection/AdvertisementSection';
+import ListofProductsSection from '../../Components/Section/ListofProductsSection/ListofProductsSection';
 
 const AllPages = () => {
   return (
@@ -12,7 +13,8 @@ const AllPages = () => {
       <FlashSalesSection />
       <CategorySection />
       <BestSellingSection />
-      <AdvertisementSection/>
+      <AdvertisementSection />
+      <ListofProductsSection />
     </div>
   )
 }

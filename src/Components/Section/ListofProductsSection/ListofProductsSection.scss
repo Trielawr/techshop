@@ -1,0 +1,41 @@
+@import "../../../styles/scss-variables.scss";
+
+.allproducts {
+  position: relative;
+
+  h2 {
+    padding: 20px 0 60px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 4%;
+    color: var(--primary-black);
+  }
+
+  //   & .flash-slider {
+  //     display: grid;
+  //     grid-template-rows: repeat(4, 1fr);
+  //  }
+  & .arrows-custom-next,
+  & .arrows-custom-prev {
+    position: absolute;
+    top: 70px;
+  }
+
+  // & .arrows-custom-prev {
+  //   right: 0px;
+
+  //   @media screen and (max-width: $bp-tablet) {
+  //     left: 76px;
+  //   }
+  // }
+
+  // & .arrows-custom-next {
+  //   right: 58px;
+
+  //   @media screen and (max-width: $bp-tablet) {
+  //     left: 10px;
+  //   }
+  // }
+}

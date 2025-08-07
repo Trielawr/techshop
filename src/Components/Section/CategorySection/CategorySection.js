@@ -3,6 +3,7 @@ import './CategorySection.scss';
 import CategoryCard from '../../Components/CategoryCard/CategoryCard';
 import Carusel from '../../Components/Carusel/Carusel';
 import { categoryData } from '../../../Date/productdata';
+import { settings } from '../../../assets/utilits';
 
 const CategorySection = () => {
   return (
@@ -14,6 +15,7 @@ const CategorySection = () => {
             caruselDate={categoryData}
             CaruselItem={CategoryCard}
             className={'category-slider'}
+            settings={settings}
           />
       </div>
     </div>
