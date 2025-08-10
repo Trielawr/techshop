@@ -8,8 +8,7 @@ const Carusel = ({ caruselDate, CaruselItem, className, settings }) => {
     const sliderRef = useRef(null);
 
   return (
-    <div className='container'>
-      <div className={`slider-container ${className}`}>
+          <div className={`slider-container ${className}`}>
         <div className='arrows-wrapper' >
             <button
                 className='arrows-custom arrows-custom-prev'  
@@ -39,7 +38,6 @@ const Carusel = ({ caruselDate, CaruselItem, className, settings }) => {
           }
         </Slider>
      </div>
-  </div>
   )
 }
 

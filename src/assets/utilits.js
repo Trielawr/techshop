@@ -40,11 +40,10 @@ export const settings = {
     
 export const multisettings = {
     className: "center",
-    centerMode: true,
+    centerMode: false,
     infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 4,
     speed: 500,
     rows: 2,
-    slidesPerRow: 2
+    slidesPerRow: 1
   };
