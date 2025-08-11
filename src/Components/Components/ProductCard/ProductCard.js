@@ -10,7 +10,7 @@ const ProductCard = ({ text, sale, price, iconname, imgname, reviews }) => {
 
   return (
       <div className='product-card'>
-      <Card style={{ width: '250px' }}>
+      <Card className='product-card-wrapper'>
         <div className='product-card-img'>
           <Card.Img className='img-fluid' variant="top" src={`/img/${imgname}.png`} alt={`${imgname}`}/>
           {sale && <p className='sale'>{'-' + sale + '%'}</p> }

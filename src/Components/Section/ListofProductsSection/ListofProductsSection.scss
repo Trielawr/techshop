@@ -13,6 +13,36 @@
     color: var(--primary-black);
   }
 
+  & .slick-slide {
+    // width: auto;
+    margin-right: -17px;
+    overflow: hidden;
+  }
+
+  & .slick-list {
+    padding: 0px;
+    // overflow: hidden;
+  }
+
+  & .flash-slider {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  & .carusel-wrapper {
+    padding-right: 30px;
+  }
+
+  & .product-card,
+  & .category-slider .carousel-wrapper {
+    width: 250px;
+    padding-right: 0px;
+  }
+
+  & button.slick-arrow {
+    display: none;
+  }
+
   & .arrows-custom-next,
   & .arrows-custom-prev {
     position: absolute;

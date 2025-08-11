@@ -39,11 +39,37 @@ export const settings = {
 };
     
 export const multisettings = {
-    className: "center",
-    centerMode: false,
-    infinite: true,
-    slidesToShow: 4,
-    speed: 500,
-    rows: 2,
-    slidesPerRow: 1
+  className: "center",
+  centerPadding: "50px",
+  centerMode: true,
+  infinite: true,
+  speed: 500,
+  rows: 2,
+  slidesPerRow: 1,
+    responsive: [
+    {
+      breakpoint: 9999,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 0
+      }
+      }
+    ]
   };

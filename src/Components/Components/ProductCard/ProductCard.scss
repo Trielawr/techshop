@@ -1,6 +1,10 @@
 .product-card {
   padding-right: 30px;
 
+  &-wrapper {
+    width: 250px;
+  }
+
   &-img {
     position: relative;
     display: inline-block;
@@ -72,6 +76,10 @@
       color: var(--primary-black);
       opacity: 0.5;
     }
+  }
+
+  & .slick-list {
+    padding: 0px;
   }
 }
 

@@ -18,7 +18,7 @@ const ListofProductsSection = () => {
           <Carusel
             caruselDate={productData}
             CaruselItem={ProductCard}
-            className={'category-slider'}
+            className={'flash-slider'}
             settings={multisettings}
           />
           <div className='botn-allproducts'>
