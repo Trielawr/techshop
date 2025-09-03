@@ -14,14 +14,16 @@ const FeaturedSection = () => {
           <CategoryDivider text={'Featured'} />
           <h2>New Arrival</h2>
           <div className='featured-showblock'>
-              <div class="featured-item1">
-                <Advertisement
-                    model={'PlayStation 5'}
-                    text={'Black and White version of the PS5 coming out on sale.'}
-                    buttontype={'link'}
-                    countdown={false}
-                    img={PlayStation5}
-                />
+        <div class="featured-item1">
+          {/* <div className='advertisement-wrapper'> */}
+            <Advertisement
+                model={'PlayStation 5'}
+                text={'Black and White version of the PS5 coming out on sale.'}
+                buttontype={'link'}
+                countdown={false}
+                img={PlayStation5}
+            />
+          {/* </div> */}
               </div>
               <div class="featured-item2">
                 <Advertisement
