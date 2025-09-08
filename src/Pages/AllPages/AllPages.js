@@ -6,6 +6,7 @@ import BestSellingSection from '../../Components/Section/BestSellingSection/Best
 import AdvertisementSection from '../../Components/Section/AdvertisementSection/AdvertisementSection';
 import ListofProductsSection from '../../Components/Section/ListofProductsSection/ListofProductsSection';
 import FeaturedSection from '../../Components/Section/FeaturedSection/FeaturedSection';
+import AdventageSection from '../../Components/Section/AdventageSection/AdventageSection';
 
 const AllPages = () => {
   return (
@@ -16,7 +17,8 @@ const AllPages = () => {
       <BestSellingSection />
       <AdvertisementSection />
       <ListofProductsSection />
-      <FeaturedSection/>
+      <FeaturedSection />
+      <AdventageSection/>
     </div>
   )
 }

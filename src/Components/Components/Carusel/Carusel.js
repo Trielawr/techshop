@@ -32,6 +32,8 @@ const Carusel = ({ caruselDate, CaruselItem, className, settings }) => {
                 iconname={item.iconname}
                 imgname={item.imgname}
                 reviews={item.reviews}
+                width={item.width}
+                height={item.height}
               />
             </div>
           ))

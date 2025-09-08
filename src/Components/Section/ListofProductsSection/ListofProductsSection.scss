@@ -14,14 +14,12 @@
   }
 
   & .slick-slide {
-    // width: auto;
     margin-right: -17px;
     overflow: hidden;
   }
 
   & .slick-list {
     padding: 0px;
-    // overflow: hidden;
   }
 
   & .flash-slider {
@@ -63,5 +61,9 @@
     @media screen and (max-width: $bp-tablet) {
       left: 10px;
     }
+  }
+
+  & .botn-allproducts::after {
+    display: none;
   }
 }
