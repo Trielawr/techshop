@@ -27,19 +27,19 @@ const Header = () => {
             </div> 
           </div>
         </div>
-          <div className='header'>
+          <div className='header-bottom'>
             <div className='container'>
-              <div className='header-main'>
-                <NavLink to={ROUTES.home} className='header-main-logo'>Exclusive</NavLink>
-                <nav className='header-main-nav'>
-                  <ul className='header-main-link'>
+              <div className='header-bottom-main'>
+                <NavLink to={ROUTES.home} className='header-bottom-main-logo'>Exclusive</NavLink>
+                <nav className='header-bottom-main-nav'>
+                  <ul className='header-bottom-main-link'>
                     <li><NavLink to={ROUTES.home}>Home</NavLink></li>
                     <li><NavLink to={ROUTES.contact}>Contact</NavLink></li>
                     <li><NavLink to={ROUTES.about}>About</NavLink></li>
                     <li><NavLink to={ROUTES.login}>Sign up</NavLink></li>
                   </ul> 
                 </nav>
-                <div className='header-main-form'>
+                <div className='header-bottom-main-form'>
                   <FieldForm
                     validationSchema={validationSchemaSearch}
                     iconname={'Find'}

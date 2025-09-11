@@ -13,6 +13,10 @@
     color: var(--primary-black);
   }
 
+  & .arrows-wrapper {
+    height: 10px;
+  }
+
   & .slick-slide {
     margin-right: -17px;
     overflow: hidden;
@@ -45,6 +49,10 @@
   & .arrows-custom-prev {
     position: absolute;
     top: 70px;
+
+    @media screen and (max-width: $bp-tablet) {
+      position: relative;
+    }
   }
 
   & .arrows-custom-prev {
@@ -52,6 +60,7 @@
 
     @media screen and (max-width: $bp-tablet) {
       left: 76px;
+      top: -60px;
     }
   }
 
@@ -60,6 +69,7 @@
 
     @media screen and (max-width: $bp-tablet) {
       left: 10px;
+      top: -105px;
     }
   }
 

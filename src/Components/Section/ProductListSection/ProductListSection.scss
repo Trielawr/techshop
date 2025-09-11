@@ -17,76 +17,74 @@
       grid-template-columns: 1fr;
     }
   }
-}
 
-.nav {
-  padding-top: 32px;
-  border-right: 0.5px solid var(--border-gray);
-  height: fit-content;
-
-  @media screen and (max-width: $bp-laptop) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 32px;
-    border: none;
-  }
-
-  @media screen and (max-width: $bp-mobile) {
-    column-gap: 10px;
-  }
-
-  &-link {
-    font-family: "Poppins", sans-serif;
-    color: var(--primary-black);
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
-    padding: 8px 51px 8px 0px;
+  & .nav {
+    padding-top: 32px;
+    border-right: 0.5px solid var(--border-gray);
+    height: fit-content;
 
     @media screen and (max-width: $bp-laptop) {
-      text-align: center;
-    }
-
-    @media screen and (max-width: $bp-tablet) {
-      font-size: 12px;
-      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 32px;
+      border: none;
     }
 
     @media screen and (max-width: $bp-mobile) {
-      padding: 5px 15px;
+      column-gap: 10px;
     }
 
-    &:last-child {
-      padding-bottom: 0px;
-    }
-  }
-
-  &-link:hover {
-    color: var(--button-hover);
-  }
-}
-
-.dropdown {
-  width: 100%;
-
-  &-toggle {
-    height: calc(1em + 1lh);
-
-    &::after {
-      content: url("../../../assets/svg/Icon/DropDown.svg");
-      position: absolute;
-      right: 0;
-      top: 5px;
-      transform: rotate(270deg);
+    &-link {
+      font-family: "Poppins", sans-serif;
       color: var(--primary-black);
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      padding: 8px 51px 8px 0px;
 
       @media screen and (max-width: $bp-laptop) {
-        right: 50px;
+        text-align: center;
+      }
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 12px;
+        padding-left: 20px;
       }
 
       @media screen and (max-width: $bp-mobile) {
-        right: -10px;
-        top: 0;
+        padding: 5px 15px;
+      }
+
+      &:last-child {
+        padding-bottom: 0px;
+      }
+    }
+
+    &-link:hover {
+      color: var(--button-hover);
+    }
+  }
+
+  & .dropdown {
+    width: 100%;
+
+    &-toggle {
+      height: calc(1em + 1lh);
+
+      &::after {
+        content: url("../../../assets/svg/Icon/DropDownBlack.svg");
+        position: absolute;
+        right: 0;
+        border: 0;
+
+        @media screen and (max-width: $bp-laptop) {
+          right: 50px;
+        }
+
+        @media screen and (max-width: $bp-mobile) {
+          right: -10px;
+          top: 0;
+        }
       }
     }
   }
