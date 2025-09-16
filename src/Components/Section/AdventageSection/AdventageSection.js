@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CategoryCard from '../../Components/CategoryCard/CategoryCard';
+import Icon from '../../Components/Icon/Icon';
 import './AdventageSection.scss';
 
 const AdventageSection = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  useEffect(() => {
+    const buttonUpVisibility = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    }
+    buttonUpVisibility();
+  },[])
+
   return (
       <div className='container'>
           <div className='adventage'> 
@@ -25,8 +47,18 @@ const AdventageSection = () => {
                 iconname={"guarantee"}
                 width={'80'}
                 height={'80'}
-              />
+        />
+        { isVisible && 
+        <button
+            className='arrows-custom arrows-toscroll'
+            style={{display: isVisible ? 'flex': 'none'}}
+                onClick={()=> {scrollToTop()}}>
+                <Icon iconname={'icons_arrow-left'} width={'24'} height={'24'}/>
+          </button>
+        }
+
           </div>
+
     </div>
   )
 }

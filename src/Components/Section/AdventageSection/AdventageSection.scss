@@ -5,6 +5,7 @@
   justify-content: center;
   gap: min(88px, 7%);
   padding: 70px 0 140px;
+  position: relative;
 
   @media screen and (max-width: $bp-tablet) {
     flex-direction: column;
@@ -58,5 +59,20 @@
 
   & .icon {
     margin-bottom: 16px;
+  }
+
+  & .arrows-toscroll {
+    bottom: 32px;
+    right: 60px;
+    position: fixed;
+    z-index: 10;
+    cursor: pointer;
+
+    & .icon {
+      position: absolute;
+      transform: rotate(90deg);
+      right: 25%;
+      top: 25%;
+    }
   }
 }
