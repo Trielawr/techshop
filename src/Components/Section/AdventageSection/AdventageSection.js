@@ -18,12 +18,18 @@ const AdventageSection = () => {
     const buttonUpVisibility = () => {
       if (window.scrollY > 200) {
         setIsVisible(true);
+        console.log("window.scrollY", window.scrollY);
       } else {
         setIsVisible(false);
       }
     }
-    buttonUpVisibility();
-  },[])
+    window.addEventListener('scroll', buttonUpVisibility);
+    return () => {
+      window.removeEventListener('scroll', buttonUpVisibility);
+    }
+  }, [])
+  
+ 
 
   return (
       <div className='container'>

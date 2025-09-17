@@ -7,8 +7,7 @@ import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import Button from '../Button/Button';
 
 const Advertisement = ({ model, countdown,buttontype, text, logo, img }) => {
-  
-  console.log('buttontype', buttontype);
+
   return (
       <div className='advertisement'>
         <div className='advertisement-block'> 

@@ -15,6 +15,17 @@ export const validationSchemaEmail = Yup.object().shape({
     .max(50, 'Email must not exeed 50 characters')
 });
 
+export const validationSchemaLogin = Yup.object().shape({
+  name: Yup.string()
+      .required('Name is required.')
+      .min(2, 'Name must be at least 2 characters.')
+      .max(50, 'Name must not exceed 50 characters'),
+  password: Yup.string()
+    .required('Password is required.')
+    .min(6, 'Password must be at least 6 characters.')
+    .max(9, 'Password must not exceed 9 characters')
+});
+
 export const ROUTES = {
     home: "/",
     login: "/login",

@@ -14,7 +14,7 @@ const FeaturedSection = () => {
           <CategoryDivider text={'Featured'} />
           <h2>New Arrival</h2>
           <div className='featured-showblock'>
-            <div class="featured-item1">
+            <div className="featured-item1">
               <Advertisement
                 model={'PlayStation 5'}
                 text={'Black and White version of the PS5 coming out on sale.'}
@@ -23,7 +23,7 @@ const FeaturedSection = () => {
                 img={PlayStation5}
               />
             </div>
-            <div class="featured-item2">
+            <div className="featured-item2">
               <Advertisement
                 model={'Women’s Collections'}
                 text={'Featured woman collections that give you another vibe.'}
@@ -32,7 +32,7 @@ const FeaturedSection = () => {
                 img={WomanCollection}
               />
             </div>
-            <div class="featured-item3">
+            <div className="featured-item3">
               <Advertisement
                 model={'Speakers'}
                 text={'Amazon wireless speakers'}
@@ -41,7 +41,7 @@ const FeaturedSection = () => {
                 img={Speakers}
               />
             </div>
-            <div class="featured-item4">
+            <div className="featured-item4">
               <Advertisement
                 model={'Perfume'}
                 text={'GUCCI INTENSE OUD EDP'}
