@@ -13,7 +13,7 @@ const ErrorPage = lazy(() => import('../Pages/ErrorPage/ErrorPage'));
 // const FoodCourtPage = lazy(() => import('../pages/FoodCourtPage/FoodCourtPage'));
 // const MapPage = lazy(() => import('../pages/MapPage/MapPage'));
 const NotFoundPage = lazy(() => import('../Pages/NotFoundPage/NotFoundPage'));
-// const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const LoginPage = lazy(() => import('../Pages/LoginPage/LoginPage'));
 // const PrivateRoute = lazy(() => import('../pages/PrivateRoute/PrivateRoute'));
 // const NearestRestaurantsPage = lazy(() => import('../pages/NearestRestaurantsPage/NearestRestaurantsPage'));
 // const RestaurantsPage = lazy(() => import('../pages/RestaurantsPage/RestaurantsPage'));
@@ -38,11 +38,11 @@ export const routerData = createBrowserRouter([
       //   element: <FoodCourtPage />,
       //   errorElement: <ErrorPage />,
       // },
-      // {
-      //   path: ROUTES.login,
-      //   element: <LoginPage />,
-      //   errorElement: <ErrorPage />,
-      // },
+      {
+        path: ROUTES.login,
+        element: <LoginPage />,
+        errorElement: <ErrorPage />,
+      },
       // {
       //   path: ROUTES.restaurants,
       //   element: <RestaurantsPage />,

@@ -1,0 +1,53 @@
+.registration {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  h1 {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 0.83;
+    letter-spacing: 4px;
+    padding-bottom: 24px;
+  }
+
+  h6 {
+    padding-bottom: 48px;
+  }
+
+  &-login-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+
+    & .botn-link {
+      color: var(--button-pink);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--button-hover-pink);
+      }
+    }
+  }
+
+  &-create-button {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+
+    & .botn-orange {
+      margin-bottom: 16px;
+    }
+  }
+
+  &-login-link {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
