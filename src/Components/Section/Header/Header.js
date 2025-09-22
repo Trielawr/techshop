@@ -36,7 +36,7 @@ const Header = () => {
                     <li><NavLink to={ROUTES.home}>Home</NavLink></li>
                     <li><NavLink to={ROUTES.contact}>Contact</NavLink></li>
                     <li><NavLink to={ROUTES.about}>About</NavLink></li>
-                    <li><NavLink to={ROUTES.login}>Sign up</NavLink></li>
+                    <li><NavLink to={ROUTES.createaccount}>Sign up</NavLink></li>
                   </ul> 
                 </nav>
                 <div className='header-bottom-main-form'>

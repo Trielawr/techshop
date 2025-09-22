@@ -1,9 +1,16 @@
 import Form from 'react-bootstrap/Form';
 import Button from '../Button/Button';
 import '../Registration/Registration.scss';
+import Icon from '../Icon/Icon';
+import { NavLink } from 'react-router-dom';
+import { ROUTES } from '../../../assets/utilits';
+import LoginImg from '../../../assets/img/login img.png'
 
-const Registration = ({ title, name, phonemail, password }) => {
+const Registration = ({ title, name, phonemail, password, registered, setRegistered }) => {
+
   return (
+      <div className='login'>
+       <img src={LoginImg} alt="Phone" />
       <div className='registration'>
           <h1>{title}</h1>
           <h6>Enter your details below</h6>
@@ -18,7 +25,9 @@ const Registration = ({ title, name, phonemail, password }) => {
                   <Button
                     className={'botn-orange'}
                     text={'Log in'}
-                    type='button'/>
+                    type='button'
+                    // onClick={<NavLink to={ROUTES.login}/>}
+                  />
                   <Button
                     className={'botn-link'}
                     text={'Forget Password?'}
@@ -32,18 +41,26 @@ const Registration = ({ title, name, phonemail, password }) => {
                     type='button' />
                   <Button
                     className={'botn-transparent'}
-                    text={'Sign up with Google'}
+                    text={
+                      <div className='google-signup'>
+                        <Icon iconname='Icon-Google' width={'24'} height={'24'} />
+                        <span>Sign up with Google</span>
+                      </div>}
                     type='button' />
                   <div className='registration-login-link'> 
                     <p>Already have account?</p>
                     <Button
                       className={'botn-link'}
                       text={'Log in'}
-                      type='link'/>
+                      href={ROUTES.login}
+                      type='link'
+                      onClick={() => setRegistered(!registered)}
+                    />
                   </div>
                 </div> 
             }
           </Form>
+        </div>
       </div>
   )
 }

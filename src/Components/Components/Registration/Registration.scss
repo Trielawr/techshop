@@ -1,8 +1,8 @@
 .registration {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
+  // font-family: "Poppins";
+  // font-size: 16px;
+  // font-weight: 400;
+  // line-height: 1.5;
 
   h1 {
     font-family: "Inter";
@@ -15,6 +15,24 @@
 
   h6 {
     padding-bottom: 48px;
+  }
+
+  & .form-control {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0px 0px 8px 0px;
+    opacity: 0.4;
+  }
+
+  & .google-signup {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .icon {
+    margin-right: 16px;
   }
 
   &-login-button {
@@ -40,6 +58,12 @@
 
     & .botn-orange {
       margin-bottom: 16px;
+    }
+
+    a {
+      font-weight: 500;
+      color: var(--primary-black);
+      // text-decoration-line: ;
     }
   }
 

@@ -6,14 +6,14 @@ import imgAS from '../assets/img/download-appstore.png';
 import imgGP from '../assets/img/download-googleplay.png';
 import imgCode from '../assets/img/Qr Code.png';
 
-
 const AllPages = lazy(() => import('../Pages/AllPages/AllPages'));
 const ErrorPage = lazy(() => import('../Pages/ErrorPage/ErrorPage'));
 // const AchievementsPage = lazy(() => import('../pages/AchievementsPage/AchievementsPage'));
 // const FoodCourtPage = lazy(() => import('../pages/FoodCourtPage/FoodCourtPage'));
 // const MapPage = lazy(() => import('../pages/MapPage/MapPage'));
 const NotFoundPage = lazy(() => import('../Pages/NotFoundPage/NotFoundPage'));
-const LoginPage = lazy(() => import('../Pages/LoginPage/LoginPage'));
+const LoginPage = lazy(() => import('../Pages/Create&LoginPage/LoginPage'));
+const CreatePage = lazy(() => import('../Pages/Create&LoginPage/CreatePage'));
 // const PrivateRoute = lazy(() => import('../pages/PrivateRoute/PrivateRoute'));
 // const NearestRestaurantsPage = lazy(() => import('../pages/NearestRestaurantsPage/NearestRestaurantsPage'));
 // const RestaurantsPage = lazy(() => import('../pages/RestaurantsPage/RestaurantsPage'));
@@ -41,6 +41,11 @@ export const routerData = createBrowserRouter([
       {
         path: ROUTES.login,
         element: <LoginPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: ROUTES.createaccount,
+        element: <CreatePage />,
         errorElement: <ErrorPage />,
       },
       // {

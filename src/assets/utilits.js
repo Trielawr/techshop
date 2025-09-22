@@ -29,6 +29,7 @@ export const validationSchemaLogin = Yup.object().shape({
 export const ROUTES = {
     home: "/",
     login: "/login",
+    createaccount: "/createaccount",
     whishlist: "/whishlist",
     card: "/card",
     checkout: "/checkout",
