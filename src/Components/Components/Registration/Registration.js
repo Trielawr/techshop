@@ -2,11 +2,21 @@ import Form from 'react-bootstrap/Form';
 import Button from '../Button/Button';
 import '../Registration/Registration.scss';
 import Icon from '../Icon/Icon';
-import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../../../assets/utilits';
 import LoginImg from '../../../assets/img/login img.png'
 
 const Registration = ({ title, name, phonemail, password, registered, setRegistered }) => {
+
+  const initialValues = {
+    name: '',
+    phonemail: '',
+    password: '',
+  }
+
+  // const [name, setName] = useState(initialValues.name);
+  const handleSubmit = () => {
+    localStorage.setItem ('name', initialValues.name)
+}
 
   return (
       <div className='login'>
@@ -26,7 +36,7 @@ const Registration = ({ title, name, phonemail, password, registered, setRegiste
                     className={'botn-orange'}
                     text={'Log in'}
                     type='button'
-                    // onClick={<NavLink to={ROUTES.login}/>}
+                    onClick={handleSubmit}
                   />
                   <Button
                     className={'botn-link'}

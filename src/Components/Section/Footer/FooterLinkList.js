@@ -39,9 +39,9 @@ const FooterLinkList = ({ item }) => {
                             />
                           </li>
                 case 'text':
-                   return <li className='footer-list-text'> {subitem.name}</li>
+                   return <li className='footer-list-text' key={index}> {subitem.name}</li>
                 case 'img':
-                    return <li className='footer-list-img'> {subitem.name}</li>
+                    return <li className='footer-list-img' key={index}> {subitem.name}</li>
                 default:
                   break;
               }
