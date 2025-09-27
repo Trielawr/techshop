@@ -13,8 +13,19 @@ export const fetchUser = async () => {
     }
 };
 
-export const isLogin = async(payload) => {
-        const response = await fetchUser();
-        const users = response;
-        return users.some(item => item.login === payload.login && item.password === payload.password);
-}
+export const isLogin = async (payload) => {
+    const response = await fetchUser();
+    const users = response;
+    return users.some(item => item.name === payload.name
+        && item.password === payload.password
+        && (item.email === payload.email || item.phone === payload.phone));
+};
+
+export const isCreate = async (payload) => {
+    const response = await fetchUser();
+    const users = response;
+    const username = users.some(item => item.name === payload.name);
+    if (username) {
+        return (new Error("Користувач з таким іменем вже існує"));
+    }
+}   

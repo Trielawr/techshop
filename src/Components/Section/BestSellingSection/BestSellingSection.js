@@ -5,6 +5,7 @@ import { productData } from '../../../Date/productdata';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import Button from '../../Components/Button/Button';
 import { NavLink } from 'react-bootstrap';
+import { ROUTES } from './../../../assets/utilits';
 
 const BestSellingSection = () => {
 
@@ -21,7 +22,7 @@ const BestSellingSection = () => {
             type='button'
             className='botn-orange'
             text='View All'
-            onClick={() => <NavLink to={ROUTER.error} />}
+            onClick={() => <NavLink to={ROUTES.error} />}
           />
         </div>
         <ul className='bestselling-products'>

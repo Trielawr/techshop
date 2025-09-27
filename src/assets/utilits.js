@@ -16,10 +16,14 @@ export const validationSchemaEmail = Yup.object().shape({
 });
 
 export const validationSchemaLogin = Yup.object().shape({
-  name: Yup.string()
-      .required('Name is required.')
-      .min(2, 'Name must be at least 2 characters.')
-      .max(50, 'Name must not exceed 50 characters'),
+  username: Yup.string()
+    .required('Name is required.')
+    .min(2, 'Name must be at least 2 characters.')
+    .max(10, 'Name must not exceed 10 characters'),
+  phonemail: Yup.string()
+    .required('Phone or Email is required.')
+    .email('Invalid email format')
+    .max(15, 'Phone or Email must not exceed 15 characters'),
   password: Yup.string()
     .required('Password is required.')
     .min(6, 'Password must be at least 6 characters.')

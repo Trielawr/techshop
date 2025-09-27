@@ -3,7 +3,7 @@ import '../Footer/Footer.scss';
 
 const FooterLinkList = ({ item }) => {
     return (
-       <>
+       <ul>
           {item.map((subitem, index) =>
             { switch (subitem.type)
               { case 'link':
@@ -47,7 +47,7 @@ const FooterLinkList = ({ item }) => {
               }
             }
           )}
-        </>  
+        </ul>  
     )
 }
 

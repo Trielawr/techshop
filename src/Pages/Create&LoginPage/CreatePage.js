@@ -11,7 +11,7 @@ const CreatePage = () => {
     <div className='container'>
         <Registration
             title={'Create an account'}
-            name={'Name'}
+            username={'Name'}
             phonemail={'Email or Phone Number'}
             password={'Password'}
             registered={registered}
