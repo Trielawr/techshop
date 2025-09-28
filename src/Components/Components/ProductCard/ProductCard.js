@@ -9,7 +9,7 @@ const ProductCard = ({ text, sale, price, iconname, imgname, reviews }) => {
   let newprice = price - price * (sale / 100);
 
   return (
-      <div className='product-card'>
+    <div className='product-card'>
       <Card className='product-card-wrapper'>
         <div className='product-card-img'>
           <Card.Img className='img-fluid' variant="top" src={`/img/${imgname}.png`} alt={`${imgname}`}/>
@@ -22,16 +22,20 @@ const ProductCard = ({ text, sale, price, iconname, imgname, reviews }) => {
         </div>
           <Card.Body>
             <Card.Title>{text}</Card.Title>
-            <Card.Text>
+            <div>
               <div className='product-card-price'>
-                <p className={ sale ? 'product-card-newprice' : 'product-card-noprice' }>{`$` + newprice}</p>
-                <p className={ sale ? 'product-card-oldprice' : 'product-card-regularprice' }>{`$` + price + '   '}</p>
+              <p className={sale ? 'product-card-newprice' : 'product-card-noprice'}>
+                {`$` + newprice}
+              </p>
+              <p className={sale ? 'product-card-oldprice' : 'product-card-regularprice'}>
+                {`$` + price + '   '}
+              </p>
               </div>
               <div className='product-card-reviews'>
                 <Icon iconname={iconname} width={'100'} height={'20'}></Icon>
                 <span>{'(' + reviews + ')'}</span>
               </div>
-           </Card.Text> 
+           </div> 
           </Card.Body>
         </Card>
     </div>

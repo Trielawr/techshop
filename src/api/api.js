@@ -13,6 +13,15 @@ export const fetchUser = async () => {
     }
 };
 
+export const addUser = async (payload) => {
+    try {
+        const response = await axios.post(`${BaseURL}/user`, payload);
+        // return (response.data);
+    } catch (error) {
+        throw new TypeError("Помилка при додаванні нового користувача", error);
+    }
+};
+
 export const isLogin = async (payload) => {
     const response = await fetchUser();
     const users = response;

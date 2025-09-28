@@ -56,54 +56,49 @@ const ProductListSection = () => {
               <div className="slider-container">           
                  <Slider {...settings}>
                     <div>
-                        <p><Advertisement
-                                model={'iPhone 10 Series'}
-                                text={'Up to 30% off Voucher'}
-                                buttontype={'link'}
-                                logo={Apple}
-                                img={Phone}
-                              />
-                        </p>
+                        <Advertisement
+                            model={'iPhone 10 Series'}
+                            text={'Up to 30% off Voucher'}
+                            buttontype={'link'}
+                            logo={Apple}
+                            img={Phone}
+                        />  
                     </div>
                     <div>
-                        <p><Advertisement
-                                model={'iPhone 11 Series'}
-                                text={'Up to 25% off Voucher'}
-                                buttontype={'link'}
-                                logo={Apple}
-                                img={Phone}
-                            />
-                        </p>
+                        <Advertisement
+                            model={'iPhone 11 Series'}
+                            text={'Up to 25% off Voucher'}
+                            buttontype={'link'}
+                            logo={Apple}
+                            img={Phone}
+                        />
                     </div>
                     <div>
-                        <p><Advertisement
-                                model={'iPhone 12 Series'}
-                                text={'Up to 20% off Voucher'}
-                                buttontype={'link'}
-                                logo={Apple}
-                                img={Phone}
-                            />
-                        </p>
+                        <Advertisement
+                            model={'iPhone 12 Series'}
+                            text={'Up to 20% off Voucher'}
+                            buttontype={'link'}
+                            logo={Apple}
+                            img={Phone}
+                        />
                     </div>
                     <div>
-                        <p><Advertisement
-                                model={'iPhone 13 Series'}
-                                text={'Up to 15% off Voucher'}
-                                buttontype={'link'}
-                                logo={Apple}
-                                img={Phone}
-                            />
-                        </p>
+                        <Advertisement
+                            model={'iPhone 13 Series'}
+                            text={'Up to 15% off Voucher'}
+                            buttontype={'link'}
+                            logo={Apple}
+                            img={Phone}
+                        />
                     </div>
                     <div>
-                        <p><Advertisement
-                                model={'iPhone 14 Series'}
-                                text={'Up to 10% off Voucher'}
-                                buttontype={'link'}
-                                logo={Apple}
-                                img={Phone}
-                            />
-                        </p>
+                        <Advertisement
+                            model={'iPhone 14 Series'}
+                            text={'Up to 10% off Voucher'}
+                            buttontype={'link'}
+                            logo={Apple}
+                            img={Phone}
+                        />
                     </div>
                 </Slider> 
                    </div>

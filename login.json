@@ -1,18 +1,30 @@
 {
-    "user": [
+  "user": [
     {
-        "id": "1",
-        "name": "admin",
-        "email": "admin@example.com",
-        "phone": "1234567890",
-        "password": "admin"
+      "id": "1",
+      "name": "admin",
+      "email": "admin@example.com",
+      "phone": "1234567890",
+      "password": "admin"
     },
     {
-        "id": "2",
-        "name": "user",
-        "email": "user@example.com",
-        "phone": "0987654321",
-        "password": "user"
+      "id": "2",
+      "name": "user",
+      "email": "user@example.com",
+      "phone": "0987654321",
+      "password": "user"
+    },
+    {
+      "id": "42d1",
+      "username": "dfgdfgdfg",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "11110000"
+    },
+    {
+      "id": "c9a0",
+      "username": "dfgdfgdfg",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "1111000"
     }
-    ]
+  ]
 }

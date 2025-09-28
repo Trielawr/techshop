@@ -7,6 +7,7 @@ import { ROUTES, validationSchemaLogin } from '../../../assets/utilits';
 import LoginImg from '../../../assets/img/login img.png'
 import { isLogin } from '../../../api/api';
 import { Field, Formik } from 'formik';
+import { addUser } from '../../../api/api';
 
 const Registration = ({ title, username, phonemail, password, registered, setRegistered }) => {
 
@@ -15,8 +16,6 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     phonemail: '',
     password: '',
   }
-
-  console.log('name start', username);
 
   const [loginName, setLoginName] = useState(initialValues.username);
 
@@ -41,7 +40,7 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchemaLogin}
-      onSubmit={handleSubmit}
+      onSubmit={(values)=> addUser(values)}
     >
           {({ handleSubmit, handleChange, values, errors, touched }) => (
             <Form noValidate
@@ -80,8 +79,6 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                   </Form.Control.Feedback>
                </Form.Group>
               }
-              {/* {phonemail &&
-                <Form.Control placeholder={`${phonemail}`} name="phonemail" />} */}
               <br />
               {password &&
                 <Form.Group controlId='password'>
@@ -99,14 +96,12 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                   </Form.Control.Feedback>
                </Form.Group>
               }
-              {/* {password &&
-                <Form.Control size="sm" type="password" placeholder={`${password}`} name="password" />} */}
               {!username ?
                 <div className='registration-login-button'>
                   <Button
                     className={'botn-orange'}
                     text={'Log in'}
-                    type='button'
+                    type='submit'
                     // disabled={isSubmiting}
                   />
                   <Button
