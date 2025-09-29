@@ -16,7 +16,7 @@ export const fetchUser = async () => {
 export const addUser = async (payload) => {
     try {
         const response = await axios.post(`${BaseURL}/user`, payload);
-        // return (response.data);
+        return (response.data);
     } catch (error) {
         throw new TypeError("Помилка при додаванні нового користувача", error);
     }
@@ -25,10 +25,17 @@ export const addUser = async (payload) => {
 export const isLogin = async (payload) => {
     const response = await fetchUser();
     const users = response;
-    return users.some(item => item.name === payload.name
+    return users.some(item => item.usernamename === payload.usernamename
         && item.password === payload.password
         && (item.email === payload.email || item.phone === payload.phone));
 };
+
+export const isSignUp = async (payload) => {
+    const response = await fetchUser();
+    console.log("user list", response);
+    const user = response;
+    return user.some((item => item.username === payload.username))
+}
 
 export const isCreate = async (payload) => {
     const response = await fetchUser();

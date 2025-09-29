@@ -6,8 +6,8 @@ import Icon from '../Icon/Icon';
 import { ROUTES, validationSchemaLogin } from '../../../assets/utilits';
 import LoginImg from '../../../assets/img/login img.png'
 import { isLogin } from '../../../api/api';
-import { Field, Formik } from 'formik';
-import { addUser } from '../../../api/api';
+import { Formik } from 'formik';
+import { addUser, isSignUp } from '../../../api/api';
 
 const Registration = ({ title, username, phonemail, password, registered, setRegistered }) => {
 
@@ -19,16 +19,17 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
 
   const [loginName, setLoginName] = useState(initialValues.username);
 
-  const handleSubmit = () => {
-    isLogin(initialValues.username);
-    if (isLogin) {
-      setLoginName(initialValues.username);
-      localStorage.setItem('name', loginName);
-      setLoginName('');
-    }
+//   const handleSubmit = () => {
+//     isLogin(initialValues.username);
+//     if (isLogin) {
+//       setLoginName(initialValues.username);
+//       localStorage.setItem('name', loginName);
+//       setLoginName('');
+//     }
     
 
-}
+  // }
+  
 
   return (
   <div className='login'>
@@ -40,7 +41,17 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchemaLogin}
-      onSubmit={(values)=> addUser(values)}
+          onSubmit={async(values,{resetForm,setFieldError}) => {
+            const exist = await isSignUp(values);
+            if (exist) {
+              setFieldError('username', "Такий користувач вже існує");
+              return
+            }
+            addUser(values);
+          
+            resetForm();
+          }
+          }
     >
           {({ handleSubmit, handleChange, values, errors, touched }) => (
             <Form noValidate
@@ -61,7 +72,6 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                   </Form.Control.Feedback>
                </Form.Group>
               }
-              {console.log('name', username)}
               <br />
               {phonemail &&
                 <Form.Group controlId='phonemail'>
@@ -114,7 +124,7 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                   <Button
                     className={'botn-orange'}
                     text={'Create Account'}
-                    type='button' />
+                    type='submit' />
                   <Button
                     className={'botn-transparent'}
                     text={

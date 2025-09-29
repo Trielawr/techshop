@@ -3,14 +3,14 @@ import './Button.scss';
 const Button = ({ type, text, className, disabled, onClick, href }) => {
   return (
     <>
-      {type !== 'button' &&
+      {(type !== 'button' && type !== 'submit') &&
         <a
           className={className}
           href={`${href}`}>
           { text }
         </a>
       }
-      {type === 'button' &&
+      {(type === 'button' || type === 'submit') &&
         <button
           className={`botn ${className}`}
           disabled={disabled}

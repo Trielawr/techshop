@@ -2,14 +2,14 @@
   "user": [
     {
       "id": "1",
-      "name": "admin",
+      "username": "admin",
       "email": "admin@example.com",
       "phone": "1234567890",
       "password": "admin"
     },
     {
       "id": "2",
-      "name": "user",
+      "username": "user",
       "email": "user@example.com",
       "phone": "0987654321",
       "password": "user"
@@ -21,8 +21,38 @@
       "password": "11110000"
     },
     {
-      "id": "c9a0",
-      "username": "dfgdfgdfg",
+      "id": "4d8e",
+      "username": "42d1",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "12231313"
+    },
+    {
+      "id": "22fe",
+      "username": "admin",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "12231313"
+    },
+    {
+      "id": "87ee",
+      "username": "777",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "12231313"
+    },
+    {
+      "id": "ef9b",
+      "username": "user1",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "12231313"
+    },
+    {
+      "id": "0ab4",
+      "username": "5656567",
+      "phonemail": "jhghjhj@hnbn",
+      "password": "12231313"
+    },
+    {
+      "id": "fb9e",
+      "username": "hjghjghj",
       "phonemail": "jhghjhj@hnbn",
       "password": "1111000"
     }
