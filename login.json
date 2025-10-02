@@ -3,15 +3,13 @@
     {
       "id": "1",
       "username": "admin",
-      "email": "admin@example.com",
-      "phone": "1234567890",
+      "phonemail": "1234567890",
       "password": "admin"
     },
     {
       "id": "2",
       "username": "user",
-      "email": "user@example.com",
-      "phone": "0987654321",
+      "phonemail": "user@example.com",
       "password": "user"
     },
     {

@@ -1,10 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from '../Button/Button';
 import '../Registration/Registration.scss';
-import Icon from '../Icon/Icon';
-import { ROUTES, validationSchemaLogin } from '../../../assets/utilits';
-import LoginImg from '../../../assets/img/login img.png'
+import { validationSchemaLogin } from '../../../assets/utilits';
 import { isLogin } from '../../../api/api';
 import { Formik } from 'formik';
 import { addUser, isSignUp } from '../../../api/api';
@@ -17,7 +15,7 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     password: '',
   }
 
-  const [loginName, setLoginName] = useState(initialValues.username);
+  // const [loginName, setLoginName] = useState(initialValues.username);
 
 //   const handleSubmit = () => {
 //     isLogin(initialValues.username);
@@ -29,29 +27,33 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     
 
   // }
-  
 
   return (
-  <div className='login'>
-      <img src={LoginImg} alt="Phone" />
+  <div className='form-block'>
       <div className='registration'>
         <h1>{title}</h1>
         <h6>Enter your details below</h6>
-
     <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchemaLogin}
-          onSubmit={async(values,{resetForm,setFieldError}) => {
-            const exist = await isSignUp(values);
-            if (exist) {
-              setFieldError('username', "Такий користувач вже існує");
-              return
+          initialValues={initialValues}
+          validationSchema={validationSchemaLogin}
+          onSubmit={async (values, { resetForm, setFieldError }) => {
+            if (username) {
+              const exist = await isSignUp(values);
+              if (exist) {
+                setFieldError('username', "Такий користувач вже існує");
+                return
+              }
+              addUser(values);
+            } else {
+              const exist = await isLogin(values);
+              if (!exist) {
+                setFieldError('phonemail', "Такої пошти або номера не існує");
+                setFieldError('password', "Пароль не вірний");
+                return
+              }
             }
-            addUser(values);
-          
             resetForm();
-          }
-          }
+          }}
     >
           {({ handleSubmit, handleChange, values, errors, touched }) => (
             <Form noValidate
@@ -105,19 +107,16 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                     {errors.password}
                   </Form.Control.Feedback>
                </Form.Group>
-              }
+              }             
               {!username ?
                 <div className='registration-login-button'>
+                  {console.log('registration values',values)}
                   <Button
                     className={'botn-orange'}
                     text={'Log in'}
-                    type='submit'
+                    type="submit"
                     // disabled={isSubmiting}
                   />
-                  <Button
-                    className={'botn-link'}
-                    text={'Forget Password?'}
-                    type='link' />
                 </div>
                 :
                 <div className='registration-create-button'>
@@ -125,28 +124,9 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                     className={'botn-orange'}
                     text={'Create Account'}
                     type='submit' />
-                  <Button
-                    className={'botn-transparent'}
-                    text={
-                      <div className='google-signup'>
-                        <Icon iconname='Icon-Google' width={'24'} height={'24'} />
-                        <span>Sign up with Google</span>
-                      </div>}
-                    type='button' />
-                  <div className='registration-login-link'>
-                    <p>Already have account?</p>
-                    <Button
-                      className={'botn-link'}
-                      text={'Log in'}
-                      href={ROUTES.login}
-                      type='link'
-                      onClick={() => setRegistered(!registered)}
-                    />
-                  </div>
-                </div>
+                 </div>
               }
             </Form>
-          
        ) 
       }
     </Formik >

@@ -25,9 +25,9 @@ export const addUser = async (payload) => {
 export const isLogin = async (payload) => {
     const response = await fetchUser();
     const users = response;
-    return users.some(item => item.usernamename === payload.usernamename
-        && item.password === payload.password
-        && (item.email === payload.email || item.phone === payload.phone));
+    console.log('payload.phonemail', payload.phonemail);
+    return users.some(item => item.password === payload.password
+        && item.phonemail === payload.phonemail);
 };
 
 export const isSignUp = async (payload) => {

@@ -1,9 +1,4 @@
 .registration {
-  // font-family: "Poppins";
-  // font-size: 16px;
-  // font-weight: 400;
-  // line-height: 1.5;
-
   h1 {
     font-family: "Inter";
     font-weight: 500;
@@ -26,52 +21,25 @@
     opacity: 0.4;
   }
 
-  & .google-signup {
-    display: flex;
-    justify-content: center;
-  }
-
-  & .icon {
-    margin-right: 16px;
-  }
-
-  &-login-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-
-    & .botn-link {
-      color: var(--button-pink);
-      text-decoration: none;
-
-      &:hover {
-        color: var(--button-hover-pink);
-      }
-    }
-  }
-
   &-create-button {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
 
-    & .botn-orange {
-      margin-bottom: 16px;
-    }
+    &-login-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
 
-    a {
-      font-weight: 500;
-      color: var(--primary-black);
-      // text-decoration-line: ;
-    }
-  }
+      & .botn-link {
+        color: var(--button-pink);
+        text-decoration: none;
 
-  &-login-link {
-    margin-top: 34px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+        &:hover {
+          color: var(--button-hover-pink);
+        }
+      }
+    }
   }
 }

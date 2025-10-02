@@ -1,0 +1,45 @@
+@import "../../styles/scss-variables.scss";
+
+.login {
+  display: flex;
+  flex-direction: row;
+  padding: 60px 0 140px 0px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &-block {
+    position: relative;
+
+    & .botn-link {
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      text-decoration: none;
+      color: var(--button-pink);
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+
+      &:hover {
+        color: var(--button-hover-pink);
+      }
+    }
+  }
+
+  & .botn-orange {
+    margin-top: 40px;
+  }
+
+  & .form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid var(--primary-black);
+  }
+
+  img {
+    position: relative;
+    left: calc((100% - 100vw) / 2);
+  }
+}
