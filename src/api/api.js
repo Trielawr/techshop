@@ -2,6 +2,7 @@ import axios from 'axios';
 
 // npm install -g json-server
 // json-server --watch login.json --port 3040
+
 const BaseURL = 'http://localhost:3040';
 
 export const fetchUser = async () => {
@@ -20,6 +21,13 @@ export const addUser = async (payload) => {
     } catch (error) {
         throw new TypeError("Помилка при додаванні нового користувача", error);
     }
+};
+
+export const getUser = async (payload) => {
+    const response = await axios.get(`${BaseURL}/user`);
+    const user = response.some(item => item.password === payload.password
+        && item.phonemail === payload.phonemail);
+    return (user.username);
 };
 
 export const isLogin = async (payload) => {

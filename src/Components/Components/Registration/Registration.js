@@ -1,11 +1,12 @@
 // import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
+import { Form as FormBootstrap } from 'react-bootstrap';
 import Button from '../Button/Button';
 import '../Registration/Registration.scss';
 import { validationSchemaLogin } from '../../../assets/utilits';
-import { isLogin } from '../../../api/api';
-import { Formik } from 'formik';
+import { getUser, isLogin } from '../../../api/api';
+import { Formik , Form} from 'formik';
 import { addUser, isSignUp } from '../../../api/api';
+import { useLocation } from 'react-router-dom';
 
 const Registration = ({ title, username, phonemail, password, registered, setRegistered }) => {
 
@@ -15,18 +16,9 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
     password: '',
   }
 
-  // const [loginName, setLoginName] = useState(initialValues.username);
-
-//   const handleSubmit = () => {
-//     isLogin(initialValues.username);
-//     if (isLogin) {
-//       setLoginName(initialValues.username);
-//       localStorage.setItem('name', loginName);
-//       setLoginName('');
-//     }
-    
-
-  // }
+  const location = useLocation();
+  const isRegistrated = location.pathname.includes('login');
+  
 
   return (
   <div className='form-block'>
@@ -37,7 +29,8 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
           initialValues={initialValues}
           validationSchema={validationSchemaLogin}
           onSubmit={async (values, { resetForm, setFieldError }) => {
-            if (username) {
+           console.log('isRegistrated', isRegistrated);
+            if (!isRegistrated) {
               const exist = await isSignUp(values);
               if (exist) {
                 setFieldError('username', "Такий користувач вже існує");
@@ -45,22 +38,24 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
               }
               addUser(values);
             } else {
+              console.log('isRegistrated login', isRegistrated);
               const exist = await isLogin(values);
               if (!exist) {
                 setFieldError('phonemail', "Такої пошти або номера не існує");
                 setFieldError('password', "Пароль не вірний");
                 return
               }
+              getUser(values);
             }
             resetForm();
-          }}
+          }  
+        }
     >
-          {({ handleSubmit, handleChange, values, errors, touched }) => (
-            <Form noValidate
-            onSubmit={handleSubmit}>
+          {({ handleChange, values, errors, touched }) => (
+            <Form noValidate>
               {username &&
-                <Form.Group controlId='username'>
-                  <Form.Control
+                <FormBootstrap.Group controlId='username'>
+                  <FormBootstrap.Control
                     name="username" 
                     size="lg"
                     type="text"
@@ -69,15 +64,15 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                     onChange={handleChange}
                     isInvalid={touched.username && !!errors.username}
                   />
-                  <Form.Control.Feedback type='invalid'>
+                  <FormBootstrap.Control.Feedback type='invalid'>
                     {errors.username}
-                  </Form.Control.Feedback>
-               </Form.Group>
+                  </FormBootstrap.Control.Feedback>
+               </FormBootstrap.Group>
               }
               <br />
               {phonemail &&
-                <Form.Group controlId='phonemail'>
-                  <Form.Control
+                <FormBootstrap.Group controlId='phonemail'>
+                  <FormBootstrap.Control
                     name="phonemail" 
                     size="lg"
                     type="text"
@@ -86,15 +81,15 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                     onChange={handleChange}
                     isInvalid={touched.phonemail && !!errors.phonemail}
                   />
-                  <Form.Control.Feedback type='invalid'>
+                  <FormBootstrap.Control.Feedback type='invalid'>
                     {errors.phonemail}
-                  </Form.Control.Feedback>
-               </Form.Group>
+                  </FormBootstrap.Control.Feedback>
+               </FormBootstrap.Group>
               }
               <br />
               {password &&
-                <Form.Group controlId='password'>
-                  <Form.Control
+                <FormBootstrap.Group controlId='password'>
+                  <FormBootstrap.Control
                     name="password" 
                     size="lg"
                     type="text"
@@ -103,29 +98,18 @@ const Registration = ({ title, username, phonemail, password, registered, setReg
                     onChange={handleChange}
                     isInvalid={touched.password && !!errors.password}
                   />
-                  <Form.Control.Feedback type='invalid'>
+                  <FormBootstrap.Control.Feedback type='invalid'>
                     {errors.password}
-                  </Form.Control.Feedback>
-               </Form.Group>
+                  </FormBootstrap.Control.Feedback>
+               </FormBootstrap.Group>
               }             
-              {!username ?
-                <div className='registration-login-button'>
-                  {console.log('registration values',values)}
+              <div className={isRegistrated ? 'registration-login-button':'registration-create-button' }>
                   <Button
                     className={'botn-orange'}
-                    text={'Log in'}
+                    text={isRegistrated ? 'Log in':'Create Account' }
                     type="submit"
-                    // disabled={isSubmiting}
                   />
                 </div>
-                :
-                <div className='registration-create-button'>
-                  <Button
-                    className={'botn-orange'}
-                    text={'Create Account'}
-                    type='submit' />
-                 </div>
-              }
             </Form>
        ) 
       }

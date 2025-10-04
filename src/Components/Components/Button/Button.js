@@ -15,7 +15,7 @@ const Button = ({ type, text, className, disabled, onClick, href }) => {
           className={`botn ${className}`}
           disabled={disabled}
           onClick={onClick}
-          // type={type || 'button'}
+          type={type || "button"}
         >
           { text }
         </button> 
